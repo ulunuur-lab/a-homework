@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Future in the Past & Reported Speech Intensive Lab | TeacherOS</title>
+  <title>Present Perfect: For vs Since & Duration Mastery | TeacherOS</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +16,11 @@
       --card-bg: #0f172a;
       --card-hover: #1e293b;
       --border: #1e293b;
-      --border-focus: #8b5cf6;
-      --primary: #8b5cf6;
-      --primary-hover: #7c3aed;
-      --primary-glow: rgba(139, 92, 246, 0.35);
-      --accent: #6366f1;
+      --border-focus: #6366f1;
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --primary-glow: rgba(99, 102, 241, 0.35);
+      --accent: #8b5cf6;
       --emerald: #10b981;
       --emerald-glow: rgba(16, 185, 129, 0.25);
       --amber: #f59e0b;
@@ -36,30 +36,30 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
     body {
       background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; padding-bottom: 90px;
-      background-image: radial-gradient(circle at 10% 15%, rgba(139, 92, 246, 0.16) 0%, transparent 45%),
-                        radial-gradient(circle at 90% 85%, rgba(99, 102, 241, 0.14) 0%, transparent 45%);
+      background-image: radial-gradient(circle at 10% 15%, rgba(99, 102, 241, 0.14) 0%, transparent 45%),
+                        radial-gradient(circle at 90% 85%, rgba(16, 185, 129, 0.12) 0%, transparent 45%);
       background-attachment: fixed;
     }
     .container { max-width: 940px; margin: 0 auto; padding: 20px 16px; }
 
     header {
-      background: linear-gradient(135deg, #0e172a 0%, #2e1065 50%, #0f172a 100%);
-      border: 1px solid rgba(139, 92, 246, 0.4);
+      background: linear-gradient(135deg, #0e172a 0%, #1e1b4b 50%, #0f172a 100%);
+      border: 1px solid rgba(99, 102, 241, 0.35);
       border-radius: var(--radius-lg); padding: 26px 24px; margin-bottom: 20px;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 30px rgba(139, 92, 246, 0.3);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 30px var(--primary-glow);
     }
     .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
     .badge {
       font-size: 0.74rem; font-weight: 800; padding: 4px 10px; border-radius: 999px; text-transform: uppercase;
       letter-spacing: 0.04em;
     }
-    .badge-topic { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; border: 1px solid rgba(196, 181, 253, 0.4); }
+    .badge-topic { background: rgba(99, 102, 241, 0.18); color: #a5b4fc; border: 1px solid rgba(165, 180, 252, 0.35); }
     .badge-mastery { background: rgba(16, 185, 129, 0.18); color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.35); }
     .badge-interactive { background: rgba(245, 158, 11, 0.18); color: #fde68a; border: 1px solid rgba(253, 230, 138, 0.35); }
 
     h1 {
       font-size: 1.85rem; font-weight: 900; margin-bottom: 6px; line-height: 1.25;
-      background: linear-gradient(135deg, #ffffff 40%, #e9d5ff 80%, #a855f7 100%);
+      background: linear-gradient(135deg, #ffffff 40%, #c7d2fe 80%, #818cf8 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
     .subtitle { color: var(--text-muted); font-size: 0.92rem; max-width: 820px; }
@@ -85,7 +85,7 @@
       z-index: 50;
       background: rgba(15, 23, 42, 0.94);
       backdrop-filter: blur(14px);
-      border: 1px solid rgba(139, 92, 246, 0.35);
+      border: 1px solid rgba(99, 102, 241, 0.35);
       border-radius: var(--radius-md);
       padding: 12px 18px;
       margin-bottom: 24px;
@@ -98,9 +98,9 @@
     }
     .score-left { display: flex; align-items: center; gap: 12px; }
     .score-badge { background: var(--primary); color: #fff; font-size: 1.15rem; font-weight: 900; padding: 4px 14px; border-radius: 8px; }
-    .progress-info { font-size: 0.88rem; font-weight: 700; color: #c4b5fd; }
+    .progress-info { font-size: 0.88rem; font-weight: 700; color: #a5b4fc; }
     .progress-bar-wrap { width: 100%; height: 6px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden; margin-top: 6px; }
-    .progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #8b5cf6, #10b981); transition: width 0.3s ease; }
+    .progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #6366f1, #10b981); transition: width 0.3s ease; }
 
     /* SECTION BOX */
     .section-box {
@@ -113,9 +113,10 @@
     }
     .sec-desc { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 18px; }
 
+    /* RULE BANNER */
     .rule-banner {
-      background: rgba(139, 92, 246, 0.12); border-left: 4px solid var(--primary); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      padding: 14px 16px; margin-bottom: 18px; font-size: 0.9rem; color: #e9d5ff; line-height: 1.6;
+      background: rgba(99, 102, 241, 0.12); border-left: 4px solid var(--primary); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 14px 16px; margin-bottom: 18px; font-size: 0.9rem; color: #c7d2fe; line-height: 1.6;
     }
 
     /* VOCAB GRID */
@@ -126,11 +127,11 @@
       background: #090f1e; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px;
       display: flex; flex-direction: column; gap: 6px; transition: all 0.2s ease;
     }
-    .vocab-card:hover { border-color: rgba(139, 92, 246, 0.5); transform: translateY(-2px); }
+    .vocab-card:hover { border-color: rgba(99, 102, 241, 0.5); transform: translateY(-2px); }
     .vocab-top { display: flex; justify-content: space-between; align-items: center; }
-    .vocab-word { font-size: 1.05rem; font-weight: 800; color: #c084fc; }
+    .vocab-word { font-size: 1.05rem; font-weight: 800; color: #67e8f9; }
     .vocab-audio-btn {
-      background: rgba(139, 92, 246, 0.15); border: 1px solid rgba(139, 92, 246, 0.3); color: #e9d5ff;
+      background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); color: #c7d2fe;
       border-radius: 6px; padding: 3px 8px; font-size: 0.78rem; cursor: pointer; transition: all 0.2s;
     }
     .vocab-audio-btn:hover { background: var(--primary); color: #fff; }
@@ -146,7 +147,7 @@
     .q-card.wrong { border-color: var(--rose); background: rgba(239, 68, 68, 0.06); }
     .q-num { font-size: 0.75rem; font-weight: 800; color: var(--primary); text-transform: uppercase; margin-bottom: 4px; }
     .q-prompt { font-size: 0.95rem; font-weight: 600; color: #fff; margin-bottom: 10px; }
-    .q-prompt code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; color: #c4b5fd; }
+    .q-prompt code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; color: #67e8f9; }
 
     .btn-group { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
     .choice-btn {
@@ -165,7 +166,8 @@
     .expl-box.correct { background: rgba(16, 185, 129, 0.12); color: #6ee7b7; border-left: 3px solid var(--emerald); }
     .expl-box.wrong { background: rgba(239, 68, 68, 0.12); color: #fca5a5; border-left: 3px solid var(--rose); }
 
-    .input-wrap { display: flex; gap: 8px; margin-top: 8px; }
+    /* ERROR HUNT */
+    .error-input-wrap { display: flex; gap: 8px; margin-top: 8px; }
     .check-btn {
       background: var(--primary); color: #fff; border: none; padding: 8px 16px; border-radius: 8px;
       font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s;
@@ -176,20 +178,20 @@
     .trans-item { margin-bottom: 16px; }
     .trans-prompt { font-size: 0.92rem; font-weight: 700; color: #e2e8f0; margin-bottom: 6px; }
     .essay-prompt {
-      background: rgba(139, 92, 246, 0.08); border: 1px solid rgba(139, 92, 246, 0.2);
+      background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.2);
       border-radius: var(--radius-md); padding: 14px; margin-bottom: 12px;
     }
-    .essay-prompt h4 { color: #c4b5fd; font-size: 0.95rem; margin-bottom: 6px; }
+    .essay-prompt h4 { color: #67e8f9; font-size: 0.95rem; margin-bottom: 6px; }
     .essay-prompt p { color: var(--text-muted); font-size: 0.86rem; margin-bottom: 8px; }
 
     /* SUBMIT CARD */
     .submit-card {
-      background: linear-gradient(135deg, #0f172a 0%, #2e1065 100%);
-      border: 1px solid rgba(139, 92, 246, 0.4); border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      border: 1px solid rgba(99, 102, 241, 0.4); border-radius: var(--radius-lg);
       padding: 24px; text-align: center; margin-top: 30px;
     }
     .submit-btn {
-      background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
       color: #fff; border: none; font-size: 1.1rem; font-weight: 800;
       padding: 14px 36px; border-radius: 12px; cursor: pointer; transition: all 0.25s ease;
       box-shadow: 0 8px 24px var(--primary-glow);
@@ -205,12 +207,12 @@
   
   <header>
     <div class="badge-row">
-      <span class="badge badge-topic">Grammar Masterclass</span>
-      <span class="badge badge-mastery">Reported Speech & Syntax</span>
-      <span class="badge badge-interactive">58 Interactive Items</span>
+      <span class="badge badge-topic">Grammar Intensive</span>
+      <span class="badge badge-mastery">Duration Mastery</span>
+      <span class="badge badge-interactive">56 Interactive Items</span>
     </div>
-    <h1>Future in the Past & Reported Speech Mastery</h1>
-    <p class="subtitle">O'tmishdan kelajakka qarash (<i>was/were going to</i>, <i>would</i>), to'g'ri nutqni o'zlashtirma nutqqa aylantirish (Reported Speech), zamonlarning orqaga surilishi (Backshift), vaqt va olmoshlar o'zgarishi hamda savol va buyruq jumlalarining murakkab transformatsiyasi.</p>
+    <h1>Present Perfect: FOR vs SINCE & Duration</h1>
+    <p class="subtitle">O'tmishda boshlanib hozirgi vaqtgacha davom etayotgan hodisalar, <i>for</i> (muddat) va <i>since</i> (boshlang'ich nuqta) farqlari, hamda real nutqda uchraydigan nozik qopqonlar ustida ishlash bo'yicha to'liq interaktiv mashg'ulot.</p>
   </header>
 
   <!-- STUDENT INFO -->
@@ -218,7 +220,7 @@
     <div class="student-inputs">
       <div class="input-group">
         <label>Ism va Familiya</label>
-        <input type="text" id="studentName" placeholder="Masalan: Jasur Mahmudov" oninput="saveDraft()">
+        <input type="text" id="studentName" placeholder="Masalan: Sardor Aliyev" oninput="saveDraft()">
       </div>
       <div class="input-group">
         <label>Telegram Username</label>
@@ -230,9 +232,9 @@
   <!-- STICKY REALTIME SCORE & PROGRESS BAR -->
   <div class="sticky-score-bar">
     <div class="score-left">
-      <div class="score-badge" id="liveScoreBadge">0 / 50</div>
+      <div class="score-badge" id="liveScoreBadge">0 / 40</div>
       <div>
-        <div class="progress-info" id="progressInfoText">Javob berildi: 0 / 50</div>
+        <div class="progress-info" id="progressInfoText">Javob berildi: 0 / 40</div>
         <div class="progress-bar-wrap">
           <div class="progress-bar-fill" id="progressBarFill"></div>
         </div>
@@ -246,51 +248,51 @@
   <!-- SECTION 1: VOCABULARY & AUDIO -->
   <div class="section-box">
     <div class="sec-title">
-      <span>🔊 1-Qism: Intention & Reporting Vocabulary (12 ta So'z)</span>
+      <span>🔊 1-Qism: Kalit So'zlar va Vaqt Ko'rsatkichlari</span>
     </div>
-    <div class="sec-desc">Tugmachani bosib so'zlarning to'g'ri talaffuzini eshiting va ularning o'zlashtirma nutqda qo'llanishiga e'tibor bering.</div>
+    <div class="sec-desc">Tugmachani bosib so'zlarning to'g'ri inglizcha talaffuzini eshiting va kontekstual misollar bilan tanishing.</div>
     <div class="vocab-grid" id="vocabGrid"></div>
   </div>
 
-  <!-- SECTION 2: WAS/WERE GOING TO vs WOULD -->
+  <!-- SECTION 2: FOR vs SINCE RAPID-FIRE -->
   <div class="section-box">
     <div class="sec-title">
-      <span>⚡ 2-Qism: Future in the Past Decision Lab (15 ta Savol)</span>
+      <span>⚡ 2-Qism: FOR yoki SINCE? (20 ta Tezkor Sinov)</span>
     </div>
-    <div class="sec-desc"><b>Qoida:</b> <code>was/were going to</code> = o'tmishda qilinmoqchi bo'lgan, lekin ko'pincha amalga oshmagan niyat/reja. <code>would</code> = o'tmishda turib kelajak haqida berilgan va'da yoki bashorat (will ning o'tgan zamoni).</div>
+    <div class="sec-desc"><b>Qoida:</b> <code>SINCE</code> = ma'lum boshlang'ich nuqta (since 2015, since childhood, since 8:00 AM). <code>FOR</code> = vaqt oralig'i yoki davomiylik (for 10 years, for 3 hours, for ages).</div>
     
     <div class="rule-banner">
-      💡 <b>Asosiy farq:</b> "I was going to call you, but my phone battery died." (Niyat bor edi, uzilib qoldi). "He told me that he would love me forever." (O'tmishdagi va'da/kelajak).
+      💡 <b>Qopqon:</b> O'zbek tilida ikkalasi ham "-dan beri" deb tarjima qilinadi. Lekin ingliz tilida "qachondan beri boshlangan?" savoliga javob bo'lsa <code>SINCE</code>, "qancha vaqt davom etdi?" savoliga javob bo'lsa <code>FOR</code> olinadi!
     </div>
 
-    <div id="fitpContainer"></div>
+    <div id="forSinceContainer"></div>
   </div>
 
-  <!-- SECTION 3: REPORTED SPEECH TRANSFORMATIONS -->
+  <!-- SECTION 3: ERROR HUNTING -->
   <div class="section-box">
     <div class="sec-title">
-      <span>🔄 3-Qism: To'g'ri Nutqni O'zlashtirma Nutqqa Aylantirish (15 ta Transformatsiya)</span>
+      <span>🔍 3-Qism: Xatolarni Topish va Tuzatish (10 ta Qopqon)</span>
     </div>
-    <div class="sec-desc">Berilgan to'g'ri nutqdagi gapni o'zlashtirma nutqqa (Reported Speech) o'giring. Zamonlar orqaga surilishi (backshift), olmoshlar va vaqt ko'rsatkichlariga qat'iy e'tibor bering.</div>
-    <div id="transformContainer"></div>
-  </div>
-
-  <!-- SECTION 4: ERROR DETECTION -->
-  <div class="section-box">
-    <div class="sec-title">
-      <span>🔍 4-Qism: Xatolarni Topish va To'g'rilash (10 ta Qopqon)</span>
-    </div>
-    <div class="sec-desc">Reported Speech va Future in the Past qoidalarining buzilishi. Gapni to'liq to'g'rilab yozing.</div>
+    <div class="sec-desc">Har bir gapda jiddiy grammatik xato bor. Gapni to'g'irlab to'liq ingliz tilida yozing va "Tekshirish" tugmasini bosing.</div>
     <div id="errorHuntContainer"></div>
   </div>
 
-  <!-- SECTION 5: REPORTING VERBS PATTERNS -->
+  <!-- SECTION 4: DEEP MULTIPLE CHOICE -->
   <div class="section-box">
     <div class="sec-title">
-      <span>🎯 5-Qism: Maxsus Reporting Fe'llar Testi (10 ta Savol)</span>
+      <span>🎯 4-Qism: Chuqurlashtirilgan Grammatik Test (10 ta Savol)</span>
     </div>
-    <div class="sec-desc"><i>say / tell</i> o'rniga <i>admit, warn, refuse, deny, accuse, recommend, threaten</i> kabi fe'llarning to'g'ri sintaktik grammatik modelini tanlang.</div>
-    <div id="reportingMcqContainer"></div>
+    <div class="sec-desc">Har bir savolda kontekstga mos eng to'g'ri grammatik konstruktsiyani tanlang.</div>
+    <div id="mcqContainer"></div>
+  </div>
+
+  <!-- SECTION 5: SENTENCE COMPLETION -->
+  <div class="section-box">
+    <div class="sec-title">
+      <span>🧩 5-Qism: Bo'shliqlarni To'ldirish (8 ta Gap)</span>
+    </div>
+    <div class="sec-desc">Fe'llarni Present Perfect zamoniga qo'ying va to'g'ri <i>for</i> yoki <i>since</i> bog'lovchisini tanlang.</div>
+    <div id="fillGapContainer"></div>
   </div>
 
   <!-- SECTION 6: CONTEXTUAL TRANSLATION -->
@@ -298,28 +300,46 @@
     <div class="sec-title">
       <span>✍️ 6-Qism: Kontekstual Tarjima (8 ta Gap)</span>
     </div>
-    <div class="sec-desc">O'zbek tilidagi murakkab gaplarni Future in the Past va Reported Speech qoidalariga rioya qilib tarjima qiling.</div>
+    <div class="sec-desc">O'zbek tilidagi gaplarni Present Perfect qoidalariga qat'iy rioya qilgan holda ingliz tiliga tarjima qiling.</div>
     <div id="transContainer"></div>
   </div>
 
-  <!-- SECTION 7: NARRATIVE STORY WRITING -->
+  <!-- SECTION 7: WRITTEN DURATION AUDIT -->
   <div class="section-box">
     <div class="sec-title">
-      <span>📝 7-Qism: Hikoya Yozish Labi: "The Day When Nothing Went According to Plan"</span>
+      <span>📝 7-Qism: Shaxsiy Tajriba va Davomiylik Audit Inshosi (4 ta Mavzu)</span>
     </div>
-    <div class="sec-desc">Boshlangan rejalaringiz buzilib ketgan yoki kutilmagan xabarlar olgan bir kun haqida inglizcha hikoya yozing. Matnda kamida <b>3 ta 'was/were going to'</b>, <b>2 ta 'would'</b> va <b>3 ta Reported Speech</b> (someone said / told / warned) jumlalari qatnashishi shart!</div>
+    <div class="sec-desc">O'z hayotingizdagi davom etayotgan voqea va odatlaringiz haqida har bir mavzuga kamida 2-3 tadan to'liq inglizcha gap yozing.</div>
     
     <div class="essay-prompt">
-      <h4>Mavzu: The Day When Nothing Went According to Plan (Rejalar o'zgargan kun)</h4>
-      <p>Masalan: "I was going to catch the 8 AM train, but my alarm didn't ring. My friend called and told me that the meeting had been canceled..."</p>
-      <textarea id="essayNarrative" rows="8" placeholder="Write your narrative story here (minimum 100-140 words)..." oninput="saveDraft()"></textarea>
+      <h4>1. Ta'lim va Ingliz Tili (Study & Language)</h4>
+      <p>Qancha vaqtdan beri ingliz tili o'rganyapsiz? Qachondan boshlagansiz? (Kamida bitta 'for' va bitta 'since' ishlating)</p>
+      <textarea id="essay1" rows="3" placeholder="Masalan: I have been studying English for... / I have attended this course since..." oninput="saveDraft()"></textarea>
+    </div>
+
+    <div class="essay-prompt">
+      <h4>2. Yashash Joyi va Uy (Living & Residence)</h4>
+      <p>Hozirgi shahringizda yoki xonadoningizda qachondan beri yashaysiz? Qanday o'zgarishlar bo'ldi?</p>
+      <textarea id="essay2" rows="3" placeholder="I have lived in this city since... / We have owned our house for..." oninput="saveDraft()"></textarea>
+    </div>
+
+    <div class="essay-prompt">
+      <h4>3. Do'stlik va Odamlar (Friendships & Relationships)</h4>
+      <p>Eng yaqin do'stingizni qachondan beri taniysiz? Birga nimalar qilgansiz?</p>
+      <textarea id="essay3" rows="3" placeholder="I have known my best friend for... / We have been friends since..." oninput="saveDraft()"></textarea>
+    </div>
+
+    <div class="essay-prompt">
+      <h4>4. Buyumlar va Qiziqishlar (Possessions & Hobbies)</h4>
+      <p>O'zingiz yaxshi ko'rgan biron buyumingiz (telefon, mashina, kitob) yoki hobbingiz haqida yozing.</p>
+      <textarea id="essay4" rows="3" placeholder="I have had this laptop since... / I have collected coins for..." oninput="saveDraft()"></textarea>
     </div>
   </div>
 
   <!-- SUBMISSION -->
   <div class="submit-card">
     <h3 style="font-size:1.4rem; font-weight:800; margin-bottom:10px;">Vazifani Ustozga Yuborish</h3>
-    <p style="color:#cbd5e1; font-size:0.92rem; margin-bottom:20px; max-width:600px; margin-left:auto; margin-right:auto;">Barcha javoblaringiz, 15 ta transformatsiyangiz, tanlovlaringiz va hikoyangiz to'g'ridan-to'g'ri ustozingizning Telegram botiga yuboriladi.</p>
+    <p style="color:#cbd5e1; font-size:0.92rem; margin-bottom:20px; max-width:600px; margin-left:auto; margin-right:auto;">Barcha javoblaringiz, to'plagan ballingiz, tarjimalaringiz va insholaringiz to'g'ridan-to'g'ri ustozingizning Telegram botiga hisobot sifatida yuboriladi.</p>
     <button class="submit-btn" id="submitBtn" onclick="submitToTelegram()">🚀 Vazifani Topshirish</button>
     <div class="status-msg" id="statusMsg"></div>
   </div>
@@ -330,449 +350,319 @@
   // TELEGRAM CONFIGURATION
   const BOT_TOKEN = '8787909516:AAFpho1G-GYg1UW87lTIEjR1Ir0z6QjmN78';
   const TEACHER_IDS = ['6315515792', '7957347033'];
-  const STORAGE_KEY = 'teacheros_hw_fitp_reported_speech';
+  const STORAGE_KEY = 'teacheros_hw_present_perfect_for_since';
 
   // 12 AUDIO VOCABULARY ITEMS
   const VOCAB_DATA = [
-    { word: "was going to", uz: "qilmoqchi edi (lekin qilmadi)", ex: "I was going to buy the ticket, but I had no cash." },
-    { word: "were going to", uz: "qilmoqchi edilar (ko'plik)", ex: "They were going to visit us last night." },
-    { word: "would", uz: "qilishini aytdi / qilardi", ex: "He said he would help me tomorrow." },
-    { word: "insist", uz: "qat'iy talab qilmoq / ta'kidlamoq", ex: "She insisted that she was innocent." },
-    { word: "warn", uz: "ogohlantirmoq", ex: "The guard warned us not to touch the wire." },
-    { word: "threaten", uz: "tahdid qilmoq / po'pisa qilmoq", ex: "He threatened to call the police." },
-    { word: "deny", uz: "inkor etmoq / rad qilmoq", ex: "The suspect denied stealing the money." },
-    { word: "admit", uz: "tan olmoq", ex: "He admitted making a serious mistake." },
-    { word: "refuse", uz: "bosh tortmoq", ex: "She refused to sign the contract." },
-    { word: "assure", uz: "ishontirmoq", ex: "The manager assured me that everything would be fine." },
-    { word: "the previous day", uz: "bir kun oldingi kun (yesterday o'rniga)", ex: "He said he had arrived the previous day." },
-    { word: "the following week", uz: "kelgusi hafta (next week o'rniga)", ex: "She promised to return the following week." }
+    { word: "for two years", uz: "ikki yildan beri (muddat)", ex: "I have lived here for two years." },
+    { word: "since 2019", uz: "2019-yildan beri (boshlang'ich yil)", ex: "She has been a doctor since 2019." },
+    { word: "since childhood", uz: "bolalikdan beri", ex: "We have known each other since childhood." },
+    { word: "for ages", uz: "juda uzoq vaqtdan beri (asrlardan beri)", ex: "I haven't seen you for ages!" },
+    { word: "since last Monday", uz: "o'tgan dushanbadan beri", ex: "He has been absent since last Monday." },
+    { word: "for a long time", uz: "uzoq vaqt davomida", ex: "They have waited for a long time." },
+    { word: "since this morning", uz: "bugun ertalabdan beri", ex: "It has been quiet since this morning." },
+    { word: "for a decade", uz: "o'n yildan beri (o'n yillik)", ex: "The company has grown for a decade." },
+    { word: "for a fortnight", uz: "ikki haftadan beri (14 kun)", ex: "He hasn't called for a fortnight." },
+    { word: "ever since", uz: "o'shandan beri to hozirgacha", ex: "He left and I haven't heard from him ever since." },
+    { word: "point in time", uz: "aniq vaqt nuqtasi (since oladi)", ex: "Since indicates a starting point in time." },
+    { word: "period of time", uz: "vaqt davomiyligi (for oladi)", ex: "For indicates a continuous period of time." }
   ];
 
-  // 15 WAS/WERE GOING TO vs WOULD ITEMS
-  const FITP_ITEMS = [
-    {
-      id: 1,
-      prompt: "I ______ call you last night, but my phone battery completely died.",
-      opts: ["was going to", "would"],
-      ans: "was going to",
-      expl: "Amalga oshmagan shaxsiy niyat / reja = 'was going to'."
-    },
-    {
-      id: 2,
-      prompt: "She assured me that she ______ always stand by my side.",
-      opts: ["would", "was going to"],
-      ans: "would",
-      expl: "O'tmishda berilgan va'da/ishonch (will ning o'tgan zamoni) = 'would'."
-    },
-    {
-      id: 3,
-      prompt: "We ______ fly to Madrid, but the pilots went on strike.",
-      opts: ["were going to", "would"],
-      ans: "were going to",
-      expl: "Rejalashtirilgan, lekin tashqi sabab bilan to'xtatilgan reja = 'were going to'."
-    },
-    {
-      id: 4,
-      prompt: "Little did he know that he ______ become the president twenty years later.",
-      opts: ["would", "was going to"],
-      ans: "would",
-      expl: "Kelajak taqdiri haqidagi hikoya uslubi (o'tmishdagi kelajak) = 'would'."
-    },
-    {
-      id: 5,
-      prompt: "He ______ buy that sports car, but he realized the insurance was too expensive.",
-      opts: ["was going to", "would"],
-      ans: "was going to",
-      expl: "Qaror o'zgargani sababli bekor qilingan niyat = 'was going to'."
-    },
-    {
-      id: 6,
-      prompt: "I knew the exam ______ be difficult, but I didn't expect it to be this tough.",
-      opts: ["would", "was going to"],
-      ans: "would",
-      expl: "O'tmishdagi shaxsiy bashorat / kutilma = 'would'."
-    },
-    {
-      id: 7,
-      prompt: "They ______ paint the house green, but their neighbors complained.",
-      opts: ["were going to", "would"],
-      ans: "were going to",
-      expl: "Boshlangan yoki rejalashtirilgan ish to'xtab qoldi = 'were going to'."
-    },
-    {
-      id: 8,
-      prompt: "The weather forecast said it ______ rain all weekend.",
-      opts: ["would", "was going to"],
-      ans: "would",
-      expl: "O'tmishdagi rasmiy ob-havo bashorati = 'would'."
-    },
-    {
-      id: 9,
-      prompt: "I ______ tell you the secret, but you promised not to laugh!",
-      opts: ["was going to", "would"],
-      ans: "was going to",
-      expl: "Aytmoqchi bo'lib turgan holat = 'was going to'."
-    },
-    {
-      id: 10,
-      prompt: "He promised that he ______ return the borrowed money on Friday.",
-      opts: ["would", "was going to"],
-      ans: "would",
-      expl: "O'tmishdagi va'da = 'would'."
-    },
-    {
-      id: 11,
-      prompt: "The train ______ depart at 6:00, but a signal failure delayed it.",
-      opts: ["was going to", "would"],
-      ans: "was going to",
-      expl: "Jadval bo'yicha rejalashtirilgan, lekin kechikkan = 'was going to'."
-    },
-    {
-      id: 12,
-      prompt: "She swore that she ______ never speak to him again.",
-      opts: ["would", "was going to"],
-      ans: "would",
-      expl: "Qasam ichish / va'da berish = 'would'."
-    },
-    {
-      id: 13,
-      prompt: "We ______ go hiking, but the storm forced us to stay inside.",
-      opts: ["were going to", "would"],
-      ans: "were going to",
-      expl: "Amalga oshmay qolgan reja = 'were going to'."
-    },
-    {
-      id: 14,
-      prompt: "He told the team that hard work ______ pay off eventually.",
-      opts: ["would", "was going to"],
-      ans: "would",
-      expl: "Kutilma va umumiy ishonch = 'would'."
-    },
-    {
-      id: 15,
-      prompt: "I ______ order seafood, but the waiter recommended the steak.",
-      opts: ["was going to", "would"],
-      ans: "was going to",
-      expl: "Oxirgi daqiqada o'zgargan niyat = 'was going to'."
-    }
-  ];
-
-  // 15 REPORTED SPEECH TRANSFORMATIONS
-  const TRANSFORM_ITEMS = [
-    {
-      id: 1,
-      direct: "Mary: 'I am moving to London tomorrow.'",
-      lead: "Mary said that...",
-      hint: "am moving -> was moving, tomorrow -> the next day / the following day",
-      accepted: [
-        "she was moving to london the next day",
-        "she was moving to london the following day"
-      ]
-    },
-    {
-      id: 2,
-      direct: "Police officer to driver: 'Show me your driving license!'",
-      lead: "The police officer ordered the driver...",
-      hint: "Imperative buyruq: to + V1",
-      accepted: [
-        "to show him his driving license",
-        "to show him her driving license",
-        "to show him the driving license"
-      ]
-    },
-    {
-      id: 3,
-      direct: "Doctor: 'Have you taken your medicine today?'",
-      lead: "The doctor asked me...",
-      hint: "Yes/No savoli: if / whether + to'g'ri so'z tartibi (I had taken... that day)",
-      accepted: [
-        "if i had taken my medicine that day",
-        "whether i had taken my medicine that day"
-      ]
-    },
-    {
-      id: 4,
-      direct: "Tom: 'Where did you buy this leather jacket?'",
-      lead: "Tom asked me...",
-      hint: "Wh-savol: where + I had bought + that leather jacket (no inversion!)",
-      accepted: [
-        "where i had bought that leather jacket",
-        "where i bought that leather jacket"
-      ]
-    },
-    {
-      id: 5,
-      direct: "Sarah: 'I will help you with your project tonight.'",
-      lead: "Sarah promised that...",
-      hint: "will -> would, you -> me, tonight -> that night",
-      accepted: [
-        "she would help me with my project that night",
-        "she would help me with the project that night"
-      ]
-    },
-    {
-      id: 6,
-      direct: "Teacher: 'Don't open your exam papers yet!'",
-      lead: "The teacher instructed the students...",
-      hint: "Salbiy buyruq: not to open their exam papers yet",
-      accepted: [
-        "not to open their exam papers yet"
-      ]
-    },
-    {
-      id: 7,
-      direct: "Client: 'Can you deliver the goods by Friday?'",
-      lead: "The client inquired...",
-      hint: "if / whether + could deliver",
-      accepted: [
-        "if we could deliver the goods by friday",
-        "if i could deliver the goods by friday",
-        "whether we could deliver the goods by friday",
-        "whether i could deliver the goods by friday"
-      ]
-    },
-    {
-      id: 8,
-      direct: "Alex: 'I bought this apartment two years ago.'",
-      lead: "Alex explained that...",
-      hint: "bought -> had bought, this -> that, two years ago -> two years before",
-      accepted: [
-        "he had bought that apartment two years before",
-        "he had bought that apartment two years earlier"
-      ]
-    },
-    {
-      id: 9,
-      direct: "Mother: 'Why were you crying when I walked in?'",
-      lead: "Mother asked me...",
-      hint: "why I had been crying when she had walked in (yoki walked in)",
-      accepted: [
-        "why i had been crying when she walked in",
-        "why i had been crying when she had walked in"
-      ]
-    },
-    {
-      id: 10,
-      direct: "Manager: 'You must submit the final report by 5 PM.'",
-      lead: "The manager said that...",
-      hint: "must -> had to submit",
-      accepted: [
-        "i had to submit the final report by 5 pm",
-        "we had to submit the final report by 5 pm"
-      ]
-    },
-    {
-      id: 11,
-      direct: "Emma: 'I have never tasted anything so delicious.'",
-      lead: "Emma stated that...",
-      hint: "have never tasted -> had never tasted",
-      accepted: [
-        "she had never tasted anything so delicious"
-      ]
-    },
-    {
-      id: 12,
-      direct: "Tourist: 'What time does the last museum tour start?'",
-      lead: "The tourist wanted to know...",
-      hint: "what time the last museum tour started (not: did it start!)",
-      accepted: [
-        "what time the last museum tour started"
-      ]
-    },
-    {
-      id: 13,
-      direct: "Jack: 'We were playing chess when the storm began.'",
-      lead: "Jack recalled that...",
-      hint: "were playing -> had been playing, began -> had begun / began",
-      accepted: [
-        "they had been playing chess when the storm began",
-        "they had been playing chess when the storm had begun"
-      ]
-    },
-    {
-      id: 14,
-      direct: "Father: 'Please be careful when crossing the busy road.'",
-      lead: "Father urged me...",
-      hint: "urged me to be careful when crossing the busy road",
-      accepted: [
-        "to be careful when crossing the busy road"
-      ]
-    },
-    {
-      id: 15,
-      direct: "Anna: 'I cannot attend the meeting because I am feeling unwell.'",
-      lead: "Anna explained that...",
-      hint: "cannot -> could not, am feeling -> was feeling",
-      accepted: [
-        "she could not attend the meeting because she was feeling unwell",
-        "she couldn't attend the meeting because she was feeling unwell"
-      ]
-    }
+  // 20 FOR vs SINCE ITEMS
+  const FOR_SINCE_ITEMS = [
+    { id: 1, prompt: "I have lived in this apartment ______ 2018.", ans: "since", expl: "2018 — aniq boshlang'ich yil, shuning uchun 'since'." },
+    { id: 2, prompt: "She has worked as a surgeon ______ 14 years.", ans: "for", expl: "14 years — vaqt oralig'i (davomiylik), shuning uchun 'for'." },
+    { id: 3, prompt: "They have been married ______ they finished university.", ans: "since", expl: "'they finished university' — ma'lum voqea sodir bo'lgan boshlang'ich nuqta, 'since'." },
+    { id: 4, prompt: "We haven't had a proper holiday ______ ages.", ans: "for", expl: "'For ages' — turg'un ibora, 'for' bilan keladi." },
+    { id: 5, prompt: "He has been waiting at the station ______ 7:30 AM.", ans: "since", expl: "7:30 AM — soat bo'yicha aniq boshlang'ich payt, 'since'." },
+    { id: 6, prompt: "The library has been closed ______ two consecutive weeks.", ans: "for", expl: "Two consecutive weeks — 2 haftalik muddat, 'for'." },
+    { id: 7, prompt: "I haven't eaten a single bite ______ breakfast.", ans: "since", expl: "Breakfast — tongi nonushtadan beri, boshlang'ich nuqta, 'since'." },
+    { id: 8, prompt: "Nobody has heard from him ______ last Christmas.", ans: "since", expl: "Last Christmas — o'tgan bayramdan beri, aniq vaqt nuqtasi, 'since'." },
+    { id: 9, prompt: "She has studied German ______ six solid months.", ans: "for", expl: "Six months — oylik muddat, 'for'." },
+    { id: 10, prompt: "The volcano has been active ______ the 19th century.", ans: "since", expl: "The 19th century — asrdan beri boshlangan, 'since'." },
+    { id: 11, prompt: "He hasn't called his mother ______ a fortnight.", ans: "for", expl: "A fortnight (14 kun) — vaqt uzunligi, 'for'." },
+    { id: 12, prompt: "They have been arguing ______ more than an hour.", ans: "for", expl: "More than an hour — bir soatdan ortiq davr, 'for'." },
+    { id: 13, prompt: "I have wanted to visit Japan ______ I was seven years old.", ans: "since", expl: "'when I was seven' — o'tmishdagi boshlang'ich vaqt, 'since'." },
+    { id: 14, prompt: "The museum has been undergoing renovations ______ January.", ans: "since", expl: "January — aniq oy nomi, boshlang'ich nuqta, 'since'." },
+    { id: 15, prompt: "We have lived in complete peace ______ a very long time.", ans: "for", expl: "'a very long time' — uzun muddat, 'for'." },
+    { id: 16, prompt: "She hasn't spoken to her manager ______ yesterday afternoon.", ans: "since", expl: "Yesterday afternoon — aniq payt, 'since'." },
+    { id: 17, prompt: "The company has lost money ______ three consecutive quarters.", ans: "for", expl: "Three quarters — 3 ta chorak davomiyligi, 'for'." },
+    { id: 18, prompt: "It has been snowing heavily ______ lunchtime.", ans: "since", expl: "Lunchtime — tushlik vaqtidan beri, 'since'." },
+    { id: 19, prompt: "He has held the world record ______ nearly twenty years.", ans: "for", expl: "Twenty years — yigirma yillik muddat, 'for'." },
+    { id: 20, prompt: "My grandparents have lived in this village ______ the end of the war.", ans: "since", expl: "The end of the war — urush tugagan aniq nuqtadan beri, 'since'." }
   ];
 
   // 10 ERROR HUNT ITEMS
   const ERROR_ITEMS = [
     {
       id: 1,
-      bad: "He said me that he was leaving.",
-      hint: "'said me' xato! 'told me' yoki 'said that' bo'lishi kerak.",
-      correctVariants: ["he told me that he was leaving", "he said that he was leaving"]
+      bad: "I know him for seven years.",
+      hint: "O'tmishda boshlanib hozir ham davom etayotgan munosabat: Present Simple EMAS!",
+      correctVariants: ["i have known him for seven years", "i've known him for seven years", "i have known him for 7 years", "i've known him for 7 years"]
     },
     {
       id: 2,
-      bad: "She asked me where did I live.",
-      hint: "Savol so'z tartibi o'zlashtirma gapda to'g'ri darak tartibiga o'tadi (inversiya yo'qoladi).",
-      correctVariants: ["she asked me where i lived"]
+      bad: "She has worked in this company since six months.",
+      hint: "Six months — muddat! Since o'rniga nima bo'ladi?",
+      correctVariants: ["she has worked in this company for six months", "she has worked in this company for 6 months"]
     },
     {
       id: 3,
-      bad: "They asked whether was I ready.",
-      hint: "whether dan keyin ega + fe'l: whether I was ready.",
-      correctVariants: ["they asked whether i was ready", "they asked if i was ready"]
+      bad: "How long do you live in this apartment?",
+      hint: "Hali ham shu yerda yashaydi. How long savolida to'g'ri Present Perfect qo'llang.",
+      correctVariants: ["how long have you lived in this apartment", "how long have you lived in this apartment?"]
     },
     {
       id: 4,
-      bad: "The teacher told us to not make noise.",
-      hint: "Inkorli buyruqda: NOT TO make noise (to not emas).",
-      correctVariants: ["the teacher told us not to make noise"]
+      bad: "We are best friends since childhood.",
+      hint: "Since kelganda to be fe'li qaysi zamonda bo'ladi?",
+      correctVariants: ["we have been best friends since childhood", "we've been best friends since childhood"]
     },
     {
       id: 5,
-      bad: "He promised he will call me yesterday.",
-      hint: "O'tmishdagi va'dada 'will' orqaga surilib 'would' bo'ladi.",
-      correctVariants: ["he promised he would call me yesterday", "he promised that he would call me yesterday"]
+      bad: "He has been absent for yesterday.",
+      hint: "Yesterday — kechadan beri (boshlang'ich nuqta). For o'rniga nima ishlatiladi?",
+      correctVariants: ["he has been absent since yesterday"]
     },
     {
       id: 6,
-      bad: "I was going to called you, but I forgot.",
-      hint: "was going to dan keyin fe'lning 1-shakli (infinitive) keladi.",
-      correctVariants: ["i was going to call you but i forgot", "i was going to call you, but i forgot"]
+      bad: "I didn't see my uncle for three years.",
+      hint: "Hali ham ko'rmagansiz. 'Didn't see' emas, Present Perfect kerak!",
+      correctVariants: ["i haven't seen my uncle for three years", "i have not seen my uncle for three years", "i haven't seen my uncle for 3 years"]
     },
     {
       id: 7,
-      bad: "She asked what time was the train leaving.",
-      hint: "To'g'ri so'z tartibi: what time the train was leaving.",
-      correctVariants: ["she asked what time the train was leaving"]
+      bad: "She is having this headache since this morning.",
+      hint: "Bosh og'rig'i ertalabdan beri davom etmoqda. Stative/holat fe'li Present Perfect Simple oladi.",
+      correctVariants: ["she has had this headache since this morning", "she's had this headache since this morning"]
     },
     {
       id: 8,
-      bad: "He explained that he has finished the project yesterday.",
-      hint: "has finished -> had finished, yesterday -> the previous day / the day before.",
-      correctVariants: [
-        "he explained that he had finished the project the day before",
-        "he explained that he had finished the project the previous day"
-      ]
+      bad: "My parents are married since 1995.",
+      hint: "Nikoh 1995-yildan beri davom etmoqda. Present Perfect kerak.",
+      correctVariants: ["my parents have been married since 1995"]
     },
     {
       id: 9,
-      bad: "He admitted to steal the precious watch.",
-      hint: "admit fe'li gerund oladi: admit stealing / admit having stolen.",
-      correctVariants: ["he admitted stealing the precious watch", "he admitted having stolen the precious watch"]
+      bad: "They have been here for 9 o'clock.",
+      hint: "9 o'clock — soat bo'yicha aniq payt.",
+      correctVariants: ["they have been here since 9 o'clock", "they have been here since 9:00", "they have been here since 9 am"]
     },
     {
       id: 10,
-      bad: "She asked me if could I lend her my pen.",
-      hint: "if I could lend (not if could I).",
-      correctVariants: ["she asked me if i could lend her my pen", "she asked me whether i could lend her my pen"]
+      bad: "I haven't played football since two weeks.",
+      hint: "Two weeks — ikki haftalik muddat.",
+      correctVariants: ["i haven't played football for two weeks", "i have not played football for two weeks", "i haven't played football for 2 weeks"]
     }
   ];
 
-  // 10 REPORTING VERBS MCQS
-  const REPORTING_MCQ_ITEMS = [
+  // 10 MULTIPLE CHOICE ITEMS
+  const MCQ_ITEMS = [
     {
       id: 1,
-      q: "The thief finally admitted ______ the diamonds from the safe.",
-      opts: ["to steal", "stealing", "that to steal", "stolen"],
-      ans: "stealing",
-      expl: "Admit fe'li o'zidan keyin Gerund (V-ing) talab qiladi: admitted stealing."
+      q: "Which sentence correctly expresses ongoing residence?",
+      opts: [
+        "I am living in Tashkent for five years.",
+        "I have lived in Tashkent for five years.",
+        "I lived in Tashkent since five years.",
+        "I live in Tashkent since five years ago."
+      ],
+      ans: "I have lived in Tashkent for five years.",
+      expl: "Davom etayotgan yashash uchun Present Perfect + for (muddat) to'g'ri."
     },
     {
       id: 2,
-      q: "The tour guide warned the hikers ______ too close to the edge of the cliff.",
-      opts: ["to not go", "not to go", "don't go", "against not going"],
-      ans: "not to go",
-      expl: "Warn someone not to do something."
+      q: "'Since when have you known her?' — Choose the correct answer:",
+      opts: [
+        "Since about three weeks.",
+        "Since we were at primary school.",
+        "For last summer.",
+        "Since two hours."
+      ],
+      ans: "Since we were at primary school.",
+      expl: "'Since' har doim aniq boshlang'ich voqea yoki nuqta bilan keladi."
     },
     {
       id: 3,
-      q: "He refused ______ any questions without his lawyer present.",
-      opts: ["answering", "to answer", "answer", "of answering"],
-      ans: "to answer",
-      expl: "Refuse fe'li to-infinitive oladi: refused to answer."
+      q: "How long ______ that laptop?",
+      opts: [
+        "have you had",
+        "do you have",
+        "did you have",
+        "are you having"
+      ],
+      ans: "have you had",
+      expl: "Egalik (have) holat fe'li bo'lib, davomiylik savolida 'have you had' shaklini oladi."
     },
     {
       id: 4,
-      q: "The cashier accused the customer ______ using counterfeit banknotes.",
-      opts: ["for", "of", "to", "with"],
-      ans: "of",
-      expl: "Accuse somebody OF doing something."
+      q: "It ______ heavily ______ six o'clock this morning.",
+      opts: [
+        "has rained / for",
+        "has been raining / since",
+        "is raining / since",
+        "rained / for"
+      ],
+      ans: "has been raining / since",
+      expl: "Ertalab soat 6 dan beri yog'moqda: Present Perfect Continuous + since."
     },
     {
       id: 5,
-      q: "She suggested ______ a taxi instead of waiting for the late bus.",
-      opts: ["to take", "taking", "us to take", "we to take"],
-      ans: "taking",
-      expl: "Suggest fe'lidan keyin to-infinitive kelmaydi, faqat Gerund (taking) yoki that-clause keladi."
+      q: "We haven't received any updates from the team ______.",
+      opts: [
+        "since three days",
+        "for last Friday",
+        "since last Friday",
+        "for five o'clock"
+      ],
+      ans: "since last Friday",
+      expl: "Last Friday — aniq boshlang'ich kun, shuning uchun 'since last Friday'."
     },
     {
       id: 6,
-      q: "The blackmailer threatened ______ the sensitive documents to the media.",
-      opts: ["releasing", "to release", "for releasing", "release"],
-      ans: "to release",
-      expl: "Threaten fe'li to-infinitive talab qiladi: threatened to release."
+      q: "Which expression CANNOT follow 'since'?",
+      opts: [
+        "yesterday evening",
+        "the accident happened",
+        "ten minutes",
+        "I was born"
+      ],
+      ans: "ten minutes",
+      expl: "'ten minutes' — muddat, shuning uchun 'for ten minutes' bo'ladi, since bilan kelmaydi."
     },
     {
       id: 7,
-      q: "He apologized ______ interrupting our important meeting.",
-      opts: ["to", "for", "about", "with"],
-      ans: "for",
-      expl: "Apologize FOR doing something."
+      q: "He has been unemployed ______ he lost his job in October.",
+      opts: [
+        "for",
+        "since",
+        "from",
+        "during"
+      ],
+      ans: "since",
+      expl: "Oktabrda ishini yo'qotgan paytdan beri: aniq voqea = since."
     },
     {
       id: 8,
-      q: "The defendant denied ______ anywhere near the scene of the crime.",
-      opts: ["being", "to be", "to have been", "was"],
-      ans: "being",
-      expl: "Deny fe'li Gerund oladi: denied being."
+      q: "'I have had this watch ______ ages.' Which preposition fits?",
+      opts: [
+        "since",
+        "for",
+        "by",
+        "in"
+      ],
+      ans: "for",
+      expl: "'For ages' — turg'un ibora (juda uzoq vaqtdan beri)."
     },
     {
       id: 9,
-      q: "The doctor recommended that the patient ______ more rest.",
-      opts: ["gets", "get", "getting", "to get"],
-      ans: "get",
-      expl: "Subjunctive / base form: recommended that he (should) get more rest."
+      q: "Nobody has visited the old lighthouse ______ the past decade.",
+      opts: [
+        "since",
+        "for",
+        "from",
+        "until"
+      ],
+      ans: "for",
+      expl: "'The past decade' — o'n yillik muddat bo'lgani sababli 'for'."
     },
     {
       id: 10,
-      q: "She insisted ______ paying the entire restaurant bill herself.",
-      opts: ["for", "on", "in", "to"],
-      ans: "on",
-      expl: "Insist ON doing something."
+      q: "Which sentence is 100% grammatically correct?",
+      opts: [
+        "I have been waiting here since 40 minutes.",
+        "She has worked as an architect for 2012.",
+        "He has been ill since the day before yesterday.",
+        "They are married for twenty-five years."
+      ],
+      ans: "He has been ill since the day before yesterday.",
+      expl: "'the day before yesterday' — o'tgan kundan beri (boshlang'ich nuqta) + has been ill."
+    }
+  ];
+
+  // 8 FILL GAP ITEMS
+  const FILL_GAP_ITEMS = [
+    {
+      id: 1,
+      prompt: "Akmal and Karim (be) ______ friends (since / for) ______ they were at kindergarten.",
+      opts: ["have been / since", "are / for", "were / since", "have been / for"],
+      ans: "have been / since",
+      expl: "Present Perfect 'have been' + kindergarten (boshlang'ich nuqta) uchun 'since'."
+    },
+    {
+      id: 2,
+      prompt: "I (not see) ______ my cousin (since / for) ______ a very long time.",
+      opts: ["haven't seen / for", "didn't see / since", "haven't seen / since", "don't see / for"],
+      ans: "haven't seen / for",
+      expl: "'haven't seen' + 'a very long time' (muddat) uchun 'for'."
+    },
+    {
+      id: 3,
+      prompt: "How long ______ you ______ (own) this property?",
+      opts: ["have / owned", "do / own", "did / own", "are / owning"],
+      ans: "have / owned",
+      expl: "Davom etayotgan egalik uchun 'have you owned'."
+    },
+    {
+      id: 4,
+      prompt: "The shop (be) ______ closed ______ 6 o'clock this evening.",
+      opts: ["has been / since", "was / for", "is / since", "has been / for"],
+      ans: "has been / since",
+      expl: "Soat 6 dan beri yopiq: 'has been closed since 6 o'clock'."
+    },
+    {
+      id: 5,
+      prompt: "My sister (work) ______ at the bank ______ she graduated in 2021.",
+      opts: ["has worked / since", "works / for", "worked / since", "is working / for"],
+      ans: "has worked / since",
+      expl: "2021-yilda bitirganidan beri: 'has worked since'."
+    },
+    {
+      id: 6,
+      prompt: "The patient (not sleep) ______ well ______ several nights.",
+      opts: ["hasn't slept / for", "didn't sleep / since", "doesn't sleep / for", "hasn't slept / since"],
+      ans: "hasn't slept / for",
+      expl: "'Several nights' — bir necha kechalik muddat: 'hasn't slept for'."
+    },
+    {
+      id: 7,
+      prompt: "He (not take) ______ a single day off ______ last January.",
+      opts: ["hasn't taken / since", "didn't take / for", "doesn't take / since", "hasn't taken / for"],
+      ans: "hasn't taken / since",
+      expl: "O'tgan yanvardan beri: 'hasn't taken since'."
+    },
+    {
+      id: 8,
+      prompt: "They (live) ______ without electricity ______ nearly three days.",
+      opts: ["have lived / for", "live / since", "lived / for", "are living / since"],
+      ans: "have lived / for",
+      expl: "3 kunlik muddat uchun: 'have lived for'."
     }
   ];
 
   // 8 CONTEXTUAL TRANSLATION ITEMS
   const TRANS_ITEMS = [
-    { id: 1, uz: "1. Men unga ertaga yordam berishimni va'da qildim.", placeholder: "I promised that I would help him/her the next day..." },
-    { id: 2, uz: "2. Ular uyni sotmoqchi edilar, lekin oxirgi lahzada fikrlaridan qaytdilar.", placeholder: "They were going to sell the house, but they changed their mind at the last moment..." },
-    { id: 3, uz: "3. Ustoz bizdan imtihon qog'ozlarini qachon topshirishimizni so'radi.", placeholder: "The teacher asked us when we would submit our exam papers..." },
-    { id: 4, uz: "4. Shifokor unga og'ir yuk ko'tarmaslikni qat'iy tayinladi.", placeholder: "The doctor ordered him not to lift heavy weights..." },
-    { id: 5, uz: "5. U o'tgan yili yangi til o'rganishni boshlamoqchi edi.", placeholder: "He was going to start learning a new language last year..." },
-    { id: 6, uz: "6. Politsiya gumondordan o'sha kechasi qayerda bo'lganini so'radi.", placeholder: "The police asked the suspect where he had been that night..." },
-    { id: 7, uz: "7. Akmal bu sirni hech kimga aytmasligini ta'kidladi.", placeholder: "Akmal insisted / promised that he would not tell anyone this secret..." },
-    { id: 8, uz: "8. Men unga qo'ng'iroq qilmoqchi edim, lekin raqamini yo'qotib qo'ygan edim.", placeholder: "I was going to call him, but I had lost his phone number..." }
+    { id: 1, uz: "1. Men uni 2019-yildan beri taniyman.", placeholder: "I have known him/her since 2019..." },
+    { id: 2, uz: "2. U bu yerda 4 soatdan beri kutmoqda.", placeholder: "He/She has been waiting here for 4 hours..." },
+    { id: 3, uz: "3. Biz bolaligimizdan beri eng yaqin do'stlarmiz.", placeholder: "We have been best friends since childhood..." },
+    { id: 4, uz: "4. Siz qancha vaqtdan beri bu maktabda o'qiysiz?", placeholder: "How long have you studied at this school?..." },
+    { id: 5, uz: "5. Akam bu mashinaga 3 yildan beri egalik qiladi.", placeholder: "My brother has owned / had this car for 3 years..." },
+    { id: 6, uz: "6. Ular o'tgan haftadan beri bir-biri bilan gaplashgani yo'q.", placeholder: "They haven't spoken to each other since last week..." },
+    { id: 7, uz: "7. Men ertalab soat yettidan beri hech narsa yeganim yo'q.", placeholder: "I haven't eaten anything since 7 o'clock this morning..." },
+    { id: 8, uz: "8. Bu kompaniya 20 yildan ortiq vaqt davomida faoliyat yuritib kelmoqda.", placeholder: "This company has operated for more than 20 years..." }
   ];
 
   // STATE TRACKING
   let userResponses = {
-    fitp: {},
-    transforms: {},
+    forSince: {},
     errorHunt: {},
-    reportingMcq: {},
+    mcq: {},
+    fillGap: {},
     translations: {},
-    narrative: ""
+    essays: {}
   };
 
+  // AUDIO PRONUNCIATION
   function speak(text) {
     if (!window.speechSynthesis) return;
     window.speechSynthesis.cancel();
@@ -782,12 +672,13 @@
     window.speechSynthesis.speak(u);
   }
 
+  // INITIALIZATION
   function init() {
     renderVocab();
-    renderFitp();
-    renderTransforms();
+    renderForSince();
     renderErrorHunt();
-    renderReportingMcq();
+    renderMCQ();
+    renderFillGap();
     renderTranslations();
     loadDraft();
     updateLiveScore();
@@ -807,102 +698,45 @@
     `).join('');
   }
 
-  function renderFitp() {
-    const c = document.getElementById('fitpContainer');
-    c.innerHTML = FITP_ITEMS.map((item, idx) => `
-      <div class="q-card" id="card_fitp_${item.id}">
-        <div class="q-num">Qaror #${idx + 1} / 15</div>
+  function renderForSince() {
+    const c = document.getElementById('forSinceContainer');
+    c.innerHTML = FOR_SINCE_ITEMS.map((item, idx) => `
+      <div class="q-card" id="card_fs_${item.id}">
+        <div class="q-num">Savol #${idx + 1} / 20</div>
         <div class="q-prompt">${item.prompt.replace('______', '<code>[ ? ]</code>')}</div>
         <div class="btn-group">
-          ${item.opts.map(opt => `
-            <button class="choice-btn" id="btn_fitp_${item.id}_${opt.replace(/\s+/g, '_')}" onclick="handleFitpChoice(${item.id}, '${opt}')">${opt}</button>
-          `).join('')}
+          <button class="choice-btn" id="btn_fs_${item.id}_for" onclick="handleForSinceChoice(${item.id}, 'for')">FOR</button>
+          <button class="choice-btn" id="btn_fs_${item.id}_since" onclick="handleForSinceChoice(${item.id}, 'since')">SINCE</button>
         </div>
-        <div class="expl-box" id="expl_fitp_${item.id}"></div>
+        <div class="expl-box" id="expl_fs_${item.id}"></div>
       </div>
     `).join('');
   }
 
-  function handleFitpChoice(id, chosen) {
-    const item = FITP_ITEMS.find(x => x.id === id);
-    const card = document.getElementById('card_fitp_' + id);
-    const expl = document.getElementById('expl_fitp_' + id);
+  function handleForSinceChoice(id, chosen) {
+    const item = FOR_SINCE_ITEMS.find(x => x.id === id);
+    const card = document.getElementById('card_fs_' + id);
+    const btnFor = document.getElementById('btn_fs_' + id + '_for');
+    const btnSince = document.getElementById('btn_fs_' + id + '_since');
+    const expl = document.getElementById('expl_fs_' + id);
 
-    item.opts.forEach(opt => {
-      const b = document.getElementById('btn_fitp_' + id + '_' + opt.replace(/\s+/g, '_'));
-      b.disabled = true;
-      if (opt === item.ans) b.classList.add('selected-correct');
-    });
+    btnFor.disabled = true;
+    btnSince.disabled = true;
 
     const isCorrect = chosen === item.ans;
-    userResponses.fitp[id] = { chosen, isCorrect, correctAns: item.ans };
+    userResponses.forSince[id] = { chosen, isCorrect, correctAns: item.ans };
 
     if (isCorrect) {
       card.classList.add('correct');
+      document.getElementById('btn_fs_' + id + '_' + chosen).classList.add('selected-correct');
       expl.className = 'expl-box show correct';
       expl.innerHTML = '✅ <b>To\'g\'ri!</b> ' + item.expl;
     } else {
       card.classList.add('wrong');
-      document.getElementById('btn_fitp_' + id + '_' + chosen.replace(/\s+/g, '_')).classList.add('selected-wrong');
+      document.getElementById('btn_fs_' + id + '_' + chosen).classList.add('selected-wrong');
+      document.getElementById('btn_fs_' + id + '_' + item.ans).classList.add('selected-correct');
       expl.className = 'expl-box show wrong';
-      expl.innerHTML = '❌ <b>Xato.</b> ' + item.expl;
-    }
-
-    updateLiveScore();
-    saveDraft();
-  }
-
-  function renderTransforms() {
-    const c = document.getElementById('transformContainer');
-    c.innerHTML = TRANSFORM_ITEMS.map((item, idx) => `
-      <div class="q-card" id="card_transf_${item.id}">
-        <div class="q-num">Transformatsiya #${idx + 1} / 15</div>
-        <div class="q-prompt" style="color:#e9d5ff;">💬 ${item.direct}</div>
-        <div style="font-size:0.83rem; color:#94a3b8; margin-bottom:6px;">Boshlanishi: <b>${item.lead}</b></div>
-        <div class="input-wrap">
-          <input type="text" id="input_transf_${item.id}" placeholder="${item.hint}" onkeydown="if(event.key==='Enter') checkTransform(${item.id})">
-          <button class="check-btn" onclick="checkTransform(${item.id})">Tekshirish</button>
-        </div>
-        <div class="expl-box" id="expl_transf_${item.id}"></div>
-      </div>
-    `).join('');
-  }
-
-  function checkTransform(id) {
-    const item = TRANSFORM_ITEMS.find(x => x.id === id);
-    const input = document.getElementById('input_transf_' + id);
-    const card = document.getElementById('card_transf_' + id);
-    const expl = document.getElementById('expl_transf_' + id);
-
-    let val = input.value.trim().toLowerCase().replace(/[.,!?;:]/g, '');
-    // remove leading prompt if student wrote full sentence
-    const leadClean = item.lead.toLowerCase().replace(/that\.\.\.|\.\.\.|:/g, '').trim();
-    if (val.startsWith(leadClean)) {
-      val = val.substring(leadClean.length).trim();
-    }
-    if (val.startsWith('that ')) {
-      val = val.substring(5).trim();
-    }
-
-    if (!val) return;
-
-    const isCorrect = item.accepted.some(acc => {
-      let a = acc.toLowerCase().replace(/[.,!?;:]/g, '');
-      if (a.startsWith('that ')) a = a.substring(5).trim();
-      return a === val;
-    });
-
-    userResponses.transforms[id] = { typed: input.value.trim(), isCorrect, expected: item.accepted[0] };
-
-    card.classList.remove('correct', 'wrong');
-    if (isCorrect) {
-      card.classList.add('correct');
-      expl.className = 'expl-box show correct';
-      expl.innerHTML = '✅ <b>Mukammal!</b> Barcha sintaktik va zamon orqaga surilishi to\'g\'ri bajarildi.';
-    } else {
-      card.classList.add('wrong');
-      expl.className = 'expl-box show wrong';
-      expl.innerHTML = '❌ <b>Xatolik bor.</b> To\'g\'ri variant: <i>"' + item.lead + ' ' + item.accepted[0] + '"</i>';
+      expl.innerHTML = '❌ <b>Xato.</b> To\'g\'ri javob: <b>' + item.ans.toUpperCase() + '</b>. ' + item.expl;
     }
 
     updateLiveScore();
@@ -918,8 +752,8 @@
           ❌ "${item.bad}"
         </div>
         <div style="font-size:0.83rem; color:#94a3b8; margin-bottom:8px;">💡 Maslahat: ${item.hint}</div>
-        <div class="input-wrap">
-          <input type="text" id="input_err_${item.id}" placeholder="To'g'rilangan to'liq gapni yozing..." onkeydown="if(event.key==='Enter') checkErrorHunt(${item.id})">
+        <div class="error-input-wrap">
+          <input type="text" id="input_err_${item.id}" placeholder="Tuzatilgan to'liq gapni yozing..." onkeydown="if(event.key==='Enter') checkErrorHunt(${item.id})">
           <button class="check-btn" onclick="checkErrorHunt(${item.id})">Tekshirish</button>
         </div>
         <div class="expl-box" id="expl_err_${item.id}"></div>
@@ -943,7 +777,7 @@
     if (isCorrect) {
       card.classList.add('correct');
       expl.className = 'expl-box show correct';
-      expl.innerHTML = '✅ <b>Ajoyib!</b> Qopqon to\'liq tuzatildi.';
+      expl.innerHTML = '✅ <b>Ajoyib!</b> Gap to\'liq to\'g\'ri tuzatildi.';
     } else {
       card.classList.add('wrong');
       expl.className = 'expl-box show wrong';
@@ -954,36 +788,36 @@
     saveDraft();
   }
 
-  function renderReportingMcq() {
-    const c = document.getElementById('reportingMcqContainer');
-    c.innerHTML = REPORTING_MCQ_ITEMS.map((item, idx) => `
-      <div class="q-card" id="card_rep_${item.id}">
+  function renderMCQ() {
+    const c = document.getElementById('mcqContainer');
+    c.innerHTML = MCQ_ITEMS.map((item, idx) => `
+      <div class="q-card" id="card_mcq_${item.id}">
         <div class="q-num">Savol #${idx + 1} / 10</div>
         <div class="q-prompt">${item.q}</div>
-        <div class="btn-group">
+        <div class="btn-group" style="display:flex; flex-direction:column; align-items:flex-start;">
           ${item.opts.map((opt, oIdx) => `
-            <button class="choice-btn" id="btn_rep_${item.id}_${oIdx}" onclick="handleReportingChoice(${item.id}, ${oIdx})">${opt}</button>
+            <button class="choice-btn" id="btn_mcq_${item.id}_${oIdx}" onclick="handleMCQChoice(${item.id}, ${oIdx})">${opt}</button>
           `).join('')}
         </div>
-        <div class="expl-box" id="expl_rep_${item.id}"></div>
+        <div class="expl-box" id="expl_mcq_${item.id}"></div>
       </div>
     `).join('');
   }
 
-  function handleReportingChoice(id, optIdx) {
-    const item = REPORTING_MCQ_ITEMS.find(x => x.id === id);
-    const card = document.getElementById('card_rep_' + id);
+  function handleMCQChoice(id, optIdx) {
+    const item = MCQ_ITEMS.find(x => x.id === id);
+    const card = document.getElementById('card_mcq_' + id);
     const chosenText = item.opts[optIdx];
-    const expl = document.getElementById('expl_rep_' + id);
+    const expl = document.getElementById('expl_mcq_' + id);
 
     item.opts.forEach((_, i) => {
-      const b = document.getElementById('btn_rep_' + id + '_' + i);
+      const b = document.getElementById('btn_mcq_' + id + '_' + i);
       b.disabled = true;
       if (item.opts[i] === item.ans) b.classList.add('selected-correct');
     });
 
     const isCorrect = chosenText === item.ans;
-    userResponses.reportingMcq[id] = { chosen: chosenText, isCorrect, correctAns: item.ans };
+    userResponses.mcq[id] = { chosen: chosenText, isCorrect, correctAns: item.ans };
 
     if (isCorrect) {
       card.classList.add('correct');
@@ -991,7 +825,53 @@
       expl.innerHTML = '✅ <b>To\'g\'ri!</b> ' + item.expl;
     } else {
       card.classList.add('wrong');
-      document.getElementById('btn_rep_' + id + '_' + optIdx).classList.add('selected-wrong');
+      document.getElementById('btn_mcq_' + id + '_' + optIdx).classList.add('selected-wrong');
+      expl.className = 'expl-box show wrong';
+      expl.innerHTML = '❌ <b>Xato tanlov.</b> ' + item.expl;
+    }
+
+    updateLiveScore();
+    saveDraft();
+  }
+
+  function renderFillGap() {
+    const c = document.getElementById('fillGapContainer');
+    c.innerHTML = FILL_GAP_ITEMS.map((item, idx) => `
+      <div class="q-card" id="card_gap_${item.id}">
+        <div class="q-num">Bo'shliq #${idx + 1} / 8</div>
+        <div class="q-prompt">${item.prompt}</div>
+        <div class="btn-group">
+          ${item.opts.map((opt, oIdx) => `
+            <button class="choice-btn" id="btn_gap_${item.id}_${oIdx}" onclick="handleFillGapChoice(${item.id}, ${oIdx})">${opt}</button>
+          `).join('')}
+        </div>
+        <div class="expl-box" id="expl_gap_${item.id}"></div>
+      </div>
+    `).join('');
+  }
+
+  function handleFillGapChoice(id, optIdx) {
+    const item = FILL_GAP_ITEMS.find(x => x.id === id);
+    const card = document.getElementById('card_gap_' + id);
+    const chosenText = item.opts[optIdx];
+    const expl = document.getElementById('expl_gap_' + id);
+
+    item.opts.forEach((_, i) => {
+      const b = document.getElementById('btn_gap_' + id + '_' + i);
+      b.disabled = true;
+      if (item.opts[i] === item.ans) b.classList.add('selected-correct');
+    });
+
+    const isCorrect = chosenText === item.ans;
+    userResponses.fillGap[id] = { chosen: chosenText, isCorrect, correctAns: item.ans };
+
+    if (isCorrect) {
+      card.classList.add('correct');
+      expl.className = 'expl-box show correct';
+      expl.innerHTML = '✅ <b>To\'g\'ri!</b> ' + item.expl;
+    } else {
+      card.classList.add('wrong');
+      document.getElementById('btn_gap_' + id + '_' + optIdx).classList.add('selected-wrong');
       expl.className = 'expl-box show wrong';
       expl.innerHTML = '❌ <b>Xato tanlov.</b> ' + item.expl;
     }
@@ -1013,12 +893,12 @@
   function updateLiveScore() {
     let score = 0;
     let answered = 0;
-    const total = FITP_ITEMS.length + TRANSFORM_ITEMS.length + ERROR_ITEMS.length + REPORTING_MCQ_ITEMS.length; // 15 + 15 + 10 + 10 = 50 auto-graded items
+    const total = FOR_SINCE_ITEMS.length + ERROR_ITEMS.length + MCQ_ITEMS.length + FILL_GAP_ITEMS.length; // 20 + 10 + 10 + 8 = 48 auto-graded items
 
-    Object.values(userResponses.fitp).forEach(r => { answered++; if (r.isCorrect) score++; });
-    Object.values(userResponses.transforms).forEach(r => { answered++; if (r.isCorrect) score++; });
+    Object.values(userResponses.forSince).forEach(r => { answered++; if (r.isCorrect) score++; });
     Object.values(userResponses.errorHunt).forEach(r => { answered++; if (r.isCorrect) score++; });
-    Object.values(userResponses.reportingMcq).forEach(r => { answered++; if (r.isCorrect) score++; });
+    Object.values(userResponses.mcq).forEach(r => { answered++; if (r.isCorrect) score++; });
+    Object.values(userResponses.fillGap).forEach(r => { answered++; if (r.isCorrect) score++; });
 
     document.getElementById('liveScoreBadge').innerText = score + ' / ' + total;
     document.getElementById('progressInfoText').innerText = 'Javob berildi: ' + answered + ' / ' + total + ' (' + Math.round((answered/total)*100) + '%)';
@@ -1035,7 +915,12 @@
       studentTelegram: document.getElementById('studentTelegram').value,
       userResponses,
       trans: {},
-      narrative: document.getElementById('essayNarrative').value
+      essays: {
+        e1: document.getElementById('essay1').value,
+        e2: document.getElementById('essay2').value,
+        e3: document.getElementById('essay3').value,
+        e4: document.getElementById('essay4').value
+      }
     };
     TRANS_ITEMS.forEach(t => {
       const el = document.getElementById('trans_' + t.id);
@@ -1057,7 +942,12 @@
           if (el) el.value = data.trans[k];
         });
       }
-      if (data.narrative) document.getElementById('essayNarrative').value = data.narrative;
+      if (data.essays) {
+        if (data.essays.e1) document.getElementById('essay1').value = data.essays.e1;
+        if (data.essays.e2) document.getElementById('essay2').value = data.essays.e2;
+        if (data.essays.e3) document.getElementById('essay3').value = data.essays.e3;
+        if (data.essays.e4) document.getElementById('essay4').value = data.essays.e4;
+      }
     } catch(e) {}
   }
 
@@ -1075,40 +965,46 @@
 
     btn.disabled = true;
     btn.innerText = "⏳ Yuborilmoqda...";
-    status.style.color = "#e9d5ff";
+    status.style.color = "#c7d2fe";
     status.innerText = "Telegram botga hisobot uzatilmoqda...";
 
     let score = 0;
-    const total = FITP_ITEMS.length + TRANSFORM_ITEMS.length + ERROR_ITEMS.length + REPORTING_MCQ_ITEMS.length;
-    Object.values(userResponses.fitp).forEach(r => { if (r.isCorrect) score++; });
-    Object.values(userResponses.transforms).forEach(r => { if (r.isCorrect) score++; });
+    const total = FOR_SINCE_ITEMS.length + ERROR_ITEMS.length + MCQ_ITEMS.length + FILL_GAP_ITEMS.length;
+    Object.values(userResponses.forSince).forEach(r => { if (r.isCorrect) score++; });
     Object.values(userResponses.errorHunt).forEach(r => { if (r.isCorrect) score++; });
-    Object.values(userResponses.reportingMcq).forEach(r => { if (r.isCorrect) score++; });
+    Object.values(userResponses.mcq).forEach(r => { if (r.isCorrect) score++; });
+    Object.values(userResponses.fillGap).forEach(r => { if (r.isCorrect) score++; });
 
     const pct = Math.round((score / total) * 100);
 
-    let msg = "🔮 *VAZIFA HISOBOTI: FUTURE IN THE PAST & REPORTED SPEECH*\n";
+    let msg = "📘 *VAZIFA HISOBOTI: PRESENT PERFECT (FOR vs SINCE)*\n";
     msg += "━━━━━━━━━━━━━━━━━━━━\n";
     msg += "👤 *O'quvchi:* " + name + " (" + (username || "username ko'rsatilmadi") + ")\n";
     msg += "🎯 *Natija:* " + score + " / " + total + " (" + pct + "%)\n";
     msg += "⏰ *Sana:* " + new Date().toLocaleString('uz-UZ') + "\n\n";
 
     msg += "📊 *BO'LIMLAR BO'YICHA:*\n";
-    msg += "• Was/Were Going to vs Would: " + Object.values(userResponses.fitp).filter(r=>r.isCorrect).length + " / " + FITP_ITEMS.length + "\n";
-    msg += "• Reported Speech Transform: " + Object.values(userResponses.transforms).filter(r=>r.isCorrect).length + " / " + TRANSFORM_ITEMS.length + "\n";
+    msg += "• For vs Since Drilli: " + Object.values(userResponses.forSince).filter(r=>r.isCorrect).length + " / " + FOR_SINCE_ITEMS.length + "\n";
     msg += "• Qopqonlarni Tuzatish: " + Object.values(userResponses.errorHunt).filter(r=>r.isCorrect).length + " / " + ERROR_ITEMS.length + "\n";
-    msg += "• Reporting Fe'llar MCQ: " + Object.values(userResponses.reportingMcq).filter(r=>r.isCorrect).length + " / " + REPORTING_MCQ_ITEMS.length + "\n\n";
+    msg += "• Grammatik MCQ: " + Object.values(userResponses.mcq).filter(r=>r.isCorrect).length + " / " + MCQ_ITEMS.length + "\n";
+    msg += "• Bo'shliqlar: " + Object.values(userResponses.fillGap).filter(r=>r.isCorrect).length + " / " + FILL_GAP_ITEMS.length + "\n\n";
 
-    msg += "✍️ *TARJIMALAR:*\n";
+    msg += "✍️ *TARJIMALAR (Namunalar):*\n";
     TRANS_ITEMS.forEach(t => {
       const val = document.getElementById('trans_' + t.id)?.value.trim() || "—";
       msg += t.id + ". " + val + "\n";
     });
     msg += "\n";
 
-    msg += "📝 *HIKOYA INSHOSI:*\n";
-    const narr = document.getElementById('essayNarrative').value.trim() || "—";
-    msg += narr + "\n";
+    msg += "📝 *DAVOMIYLIK AUDIT INSHOSI:*\n";
+    const e1 = document.getElementById('essay1').value.trim() || "—";
+    const e2 = document.getElementById('essay2').value.trim() || "—";
+    const e3 = document.getElementById('essay3').value.trim() || "—";
+    const e4 = document.getElementById('essay4').value.trim() || "—";
+    msg += "*1. Ta'lim:* " + e1 + "\n";
+    msg += "*2. Yashash Joyi:* " + e2 + "\n";
+    msg += "*3. Do'stlik:* " + e3 + "\n";
+    msg += "*4. Qiziqishlar:* " + e4 + "\n";
 
     try {
       for (const chatId of TEACHER_IDS) {
