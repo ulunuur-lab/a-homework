@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A1 Present Perfect Continuous & 30 Irregular Verbs | TeacherOS Lab</title>
+  <title>A1 Present Perfect Simple vs Continuous & 30 Irregular Verbs (31-60) | Ulunur's English Lab</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +16,11 @@
       --card-bg: #0f172a;
       --card-hover: #1e293b;
       --border: #1e293b;
-      --border-focus: #6366f1;
-      --primary: #6366f1;
-      --primary-hover: #4f46e5;
-      --primary-glow: rgba(99, 102, 241, 0.35);
-      --accent: #8b5cf6;
+      --border-focus: #10b981;
+      --primary: #10b981;
+      --primary-hover: #059669;
+      --primary-glow: rgba(16, 185, 129, 0.35);
+      --accent: #6366f1;
       --emerald: #10b981;
       --emerald-glow: rgba(16, 185, 129, 0.25);
       --amber: #f59e0b;
@@ -36,30 +36,30 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
     body {
       background: var(--bg); color: var(--text); min-height: 100vh; line-height: 1.6; padding-bottom: 90px;
-      background-image: radial-gradient(circle at 10% 15%, rgba(99, 102, 241, 0.16) 0%, transparent 45%),
-                        radial-gradient(circle at 90% 85%, rgba(16, 185, 129, 0.12) 0%, transparent 45%);
+      background-image: radial-gradient(circle at 10% 15%, rgba(16, 185, 129, 0.16) 0%, transparent 45%),
+                        radial-gradient(circle at 90% 85%, rgba(99, 102, 241, 0.14) 0%, transparent 45%);
       background-attachment: fixed;
     }
     .container { max-width: 960px; margin: 0 auto; padding: 20px 16px; }
 
     header {
-      background: linear-gradient(135deg, #0e172a 0%, #1e1b4b 50%, #0f172a 100%);
-      border: 1px solid rgba(99, 102, 241, 0.35);
+      background: linear-gradient(135deg, #0e172a 0%, #064e3b 50%, #0f172a 100%);
+      border: 1px solid rgba(16, 185, 129, 0.4);
       border-radius: var(--radius-lg); padding: 26px 24px; margin-bottom: 20px;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 30px var(--primary-glow);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 30px rgba(16, 185, 129, 0.3);
     }
     .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
     .badge {
       font-size: 0.74rem; font-weight: 800; padding: 4px 10px; border-radius: 999px; text-transform: uppercase;
       letter-spacing: 0.04em;
     }
-    .badge-level { background: rgba(56, 189, 248, 0.18); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); }
-    .badge-topic { background: rgba(99, 102, 241, 0.18); color: #a5b4fc; border: 1px solid rgba(165, 180, 252, 0.35); }
-    .badge-interactive { background: rgba(16, 185, 129, 0.18); color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.35); }
+    .badge-level { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(110, 231, 183, 0.4); }
+    .badge-topic { background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(165, 180, 252, 0.35); }
+    .badge-interactive { background: rgba(56, 189, 248, 0.2); color: #7dd3fc; border: 1px solid rgba(125, 211, 252, 0.35); }
 
     h1 {
       font-size: 1.85rem; font-weight: 900; margin-bottom: 8px; line-height: 1.25;
-      background: linear-gradient(135deg, #ffffff 40%, #c7d2fe 80%, #818cf8 100%);
+      background: linear-gradient(135deg, #ffffff 40%, #a7f3d0 80%, #34d399 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
     .subtitle { color: #cbd5e1; font-size: 0.95rem; max-width: 860px; }
@@ -72,9 +72,16 @@
       background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-md);
       padding: 14px 16px; font-size: 0.88rem;
     }
-    .cheat-title { font-weight: 800; color: #67e8f9; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+    .cheat-title { font-weight: 800; color: #6ee7b7; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
     .cheat-rule { color: #e2e8f0; font-weight: 600; margin-bottom: 4px; }
     .cheat-ex { color: #94a3b8; font-size: 0.82rem; font-style: italic; }
+
+    /* UZ TRAP ALERT */
+    .trap-box {
+      margin-top: 14px; background: rgba(239, 68, 68, 0.12); border-left: 4px solid var(--rose);
+      padding: 12px 16px; border-radius: 8px; font-size: 0.88rem; color: #fecaca;
+    }
+    .trap-title { font-weight: 800; color: #f87171; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
 
     /* STUDENT INFO */
     .student-card {
@@ -93,76 +100,58 @@
 
     /* STICKY REALTIME SCORE & PROGRESS BAR */
     .sticky-score-bar {
-      position: sticky;
-      top: 12px;
-      z-index: 50;
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(99, 102, 241, 0.35);
-      border-radius: var(--radius-md);
-      padding: 12px 18px;
-      margin-bottom: 24px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
+      position: sticky; top: 12px; z-index: 50; background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(14px); border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: var(--radius-md); padding: 12px 18px; margin-bottom: 24px;
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
     .score-left { display: flex; align-items: center; gap: 12px; }
-    .score-badge { background: var(--primary); color: #fff; font-size: 1.15rem; font-weight: 900; padding: 4px 14px; border-radius: 8px; }
-    .progress-info { font-size: 0.88rem; font-weight: 700; color: #a5b4fc; }
+    .score-badge { background: var(--primary); color: #0b1120; font-size: 1.15rem; font-weight: 900; padding: 4px 14px; border-radius: 8px; }
+    .progress-info { font-size: 0.88rem; font-weight: 700; color: #a7f3d0; }
     .progress-bar-wrap { width: 100%; height: 6px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden; margin-top: 6px; }
-    .progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #6366f1, #10b981); transition: width 0.3s ease; }
+    .progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #10b981, #6366f1); transition: width 0.3s ease; }
 
     /* SECTION BOX */
     .section-box {
       background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-lg);
-      padding: 24px 20px; margin-bottom: 24px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      padding: 24px 20px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
     .sec-title {
       font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 6px; display: flex; align-items: center; gap: 10px;
     }
     .sec-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 18px; line-height: 1.5; }
 
-    /* VERBS TABLE / GRID */
+    /* VERBS TABLE / SEARCH */
+    .verb-search-wrap { margin-bottom: 12px; display: flex; gap: 10px; }
+    .verb-search-input {
+      background: #090f1e; border: 1px solid var(--border); color: #fff; padding: 8px 14px;
+      border-radius: 8px; font-size: 0.88rem; width: 100%; max-width: 320px;
+    }
     .verb-table-wrap {
       overflow-x: auto; margin-bottom: 16px; border-radius: var(--radius-md); border: 1px solid var(--border);
+      max-height: 480px; overflow-y: auto;
     }
     table.verb-table {
       width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem; background: #090f1e;
     }
     table.verb-table th {
-      background: #131d33; padding: 10px 14px; font-weight: 800; color: #67e8f9; text-transform: uppercase; font-size: 0.76rem;
+      background: #131d33; padding: 10px 14px; font-weight: 800; color: #6ee7b7; text-transform: uppercase; font-size: 0.76rem;
+      position: sticky; top: 0; z-index: 2;
     }
     table.verb-table td {
       padding: 8px 14px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #cbd5e1;
     }
-    table.verb-table tr:hover td { background: rgba(99, 102, 241, 0.08); }
+    table.verb-table tr:hover td { background: rgba(16, 185, 129, 0.08); }
     .verb-v1 { font-weight: 800; color: #fff; }
     .verb-v2 { font-weight: 700; color: #fde68a; font-family: 'JetBrains Mono', monospace; }
     .verb-v3 { font-weight: 800; color: #6ee7b7; font-family: 'JetBrains Mono', monospace; }
     .verb-uz { color: #94a3b8; font-style: italic; }
-
-    /* VOCAB GRID */
-    .vocab-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-bottom: 8px;
+    .audio-btn {
+      background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); color: #a7f3d0;
+      border-radius: 6px; padding: 2px 8px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;
     }
-    .vocab-card {
-      background: #090f1e; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 12px 14px;
-      display: flex; flex-direction: column; gap: 6px; transition: all 0.2s ease;
-    }
-    .vocab-card:hover { border-color: rgba(99, 102, 241, 0.5); transform: translateY(-2px); }
-    .vocab-top { display: flex; justify-content: space-between; align-items: center; }
-    .vocab-word { font-size: 1.05rem; font-weight: 800; color: #67e8f9; }
-    .vocab-audio-btn {
-      background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); color: #c7d2fe;
-      border-radius: 6px; padding: 4px 10px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s;
-    }
-    .vocab-audio-btn:hover { background: var(--primary); color: #fff; }
-    .vocab-uz { font-size: 0.88rem; font-weight: 600; color: #fde68a; }
-    .vocab-ex { font-size: 0.82rem; color: #94a3b8; font-style: italic; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 4px; }
+    .audio-btn:hover { background: var(--primary); color: #0b1120; font-weight: 800; }
 
     /* QUESTIONS */
     .q-card {
@@ -173,7 +162,7 @@
     .q-card.wrong { border-color: var(--rose); background: rgba(239, 68, 68, 0.05); }
     .q-num { font-size: 0.75rem; font-weight: 800; color: var(--primary); text-transform: uppercase; margin-bottom: 4px; }
     .q-prompt { font-size: 0.98rem; font-weight: 600; color: #fff; margin-bottom: 12px; }
-    .q-prompt code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; color: #67e8f9; font-family: 'JetBrains Mono', monospace; }
+    .q-prompt code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 4px; color: #6ee7b7; font-family: 'JetBrains Mono', monospace; }
 
     .btn-group { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
     .choice-btn {
@@ -182,17 +171,27 @@
       transition: all 0.2s;
     }
     .choice-btn:hover:not(:disabled) { background: #1c2742; border-color: var(--primary); color: #fff; transform: translateY(-1px); }
-    .choice-btn.selected-correct { background: var(--emerald) !important; border-color: var(--emerald) !important; color: #fff !important; }
+    .choice-btn.selected-correct { background: var(--emerald) !important; border-color: var(--emerald) !important; color: #0b1120 !important; font-weight: 800; }
     .choice-btn.selected-wrong { background: var(--rose) !important; border-color: var(--rose) !important; color: #fff !important; }
+    .choice-btn.reveal-correct { border: 1.5px solid var(--emerald) !important; color: #6ee7b7 !important; }
 
-    /* MISTAKE HUNTER BADGES */
-    .sentence-box-hunter {
-      background: #131d33; border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 8px;
-      padding: 10px 14px; margin-bottom: 12px; font-size: 1.02rem; font-weight: 700; color: #fca5a5;
+    /* EXPLANATION BOX (INSTANT VISUAL FEEDBACK) */
+    .expl-box {
+      font-size: 0.88rem; padding: 12px 14px; border-radius: 8px; margin-top: 10px; display: none; line-height: 1.5;
     }
+    .expl-box.show { display: block; animation: fadeIn 0.2s ease-in-out; }
+    .expl-box.correct { background: rgba(16, 185, 129, 0.12); color: #6ee7b7; border-left: 3px solid var(--emerald); }
+    .expl-box.wrong { background: rgba(239, 68, 68, 0.12); color: #fca5a5; border-left: 3px solid var(--rose); }
 
-    /* SCRAMBLE WORD BUTTONS */
-    .scramble-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    /* MISTAKE HUNTER */
+    .hunter-sentence {
+      background: #131d33; border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 8px;
+      padding: 12px 14px; margin-bottom: 12px; font-size: 1.05rem; font-weight: 700; color: #fca5a5;
+    }
+    .hunter-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+
+    /* SCRAMBLE */
+    .scramble-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
     .scramble-chip {
       background: #1e293b; border: 1px solid #334155; color: #f1f5f9; padding: 6px 14px; border-radius: 8px;
       font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: all 0.2s;
@@ -204,37 +203,49 @@
       padding: 8px 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 10px;
     }
     .scramble-item {
-      background: rgba(99, 102, 241, 0.25); border: 1px solid #6366f1; color: #c7d2fe;
+      background: rgba(16, 185, 129, 0.25); border: 1px solid #10b981; color: #a7f3d0;
       padding: 4px 10px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; cursor: pointer;
     }
-
-    .expl-box {
-      font-size: 0.86rem; padding: 10px 14px; border-radius: 8px; margin-top: 10px; display: none; line-height: 1.5;
+    .scramble-actions { display: flex; gap: 8px; margin-bottom: 10px; }
+    .check-btn {
+      background: var(--primary); color: #0b1120; border: none; padding: 7px 16px; border-radius: 8px;
+      font-weight: 800; font-size: 0.85rem; cursor: pointer; transition: all 0.2s;
     }
-    .expl-box.show { display: block; }
-    .expl-box.correct { background: rgba(16, 185, 129, 0.12); color: #6ee7b7; border-left: 3px solid var(--emerald); }
-    .expl-box.wrong { background: rgba(239, 68, 68, 0.12); color: #fca5a5; border-left: 3px solid var(--rose); }
+    .check-btn:hover { background: var(--primary-hover); color: #fff; }
+    .reset-btn {
+      background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 7px 14px; border-radius: 8px;
+      font-weight: 600; font-size: 0.85rem; cursor: pointer;
+    }
 
     /* TRANSLATION */
     .trans-item { margin-bottom: 16px; background: #090f1e; border: 1px solid var(--border); padding: 14px; border-radius: var(--radius-md); }
     .trans-prompt { font-size: 0.95rem; font-weight: 700; color: #e2e8f0; margin-bottom: 4px; }
-    .trans-hint { font-size: 0.8rem; color: #67e8f9; margin-bottom: 8px; }
+    .trans-hint { font-size: 0.8rem; color: #6ee7b7; margin-bottom: 8px; }
+    .trans-reveal-box {
+      background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px;
+      padding: 10px 14px; margin-top: 8px; font-size: 0.88rem; color: #6ee7b7; display: none;
+    }
 
     /* SUBMIT CARD */
     .submit-card {
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-      border: 1px solid rgba(99, 102, 241, 0.4); border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%);
+      border: 1px solid rgba(16, 185, 129, 0.4); border-radius: var(--radius-lg);
       padding: 26px; text-align: center; margin-top: 30px;
     }
     .submit-btn {
-      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-      color: #fff; border: none; font-size: 1.1rem; font-weight: 800;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #0b1120; border: none; font-size: 1.1rem; font-weight: 900;
       padding: 14px 38px; border-radius: 12px; cursor: pointer; transition: all 0.25s ease;
       box-shadow: 0 8px 24px var(--primary-glow);
     }
     .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 32px var(--primary-glow); }
     .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
     .status-msg { margin-top: 14px; font-size: 0.95rem; font-weight: 700; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -244,70 +255,83 @@
   <header>
     <div class="badge-row">
       <span class="badge badge-level">A1 Elementary</span>
-      <span class="badge badge-topic">Present Perfect Continuous + Irregular Verbs</span>
-      <span class="badge badge-interactive">Interactive Practice Lab</span>
+      <span class="badge badge-topic">PP Simple vs Continuous</span>
+      <span class="badge badge-topic">For, Since, How long, Duration</span>
+      <span class="badge badge-interactive">30 Irregular Verbs (31-60)</span>
+      <span class="badge badge-interactive">⚡ Instant Feedback</span>
     </div>
-    <h1>Present Perfect Continuous & 30 ta Noto'g'ri Fe'l (A1)</h1>
-    <p class="subtitle">Present Perfect Continuous zamonini mukammal o'rganing: o'tmishda boshlanib, hozir ham davom etayotgan harakatlar! Shuningdek, ingliz tilining eng muhim ikkinchi guruhidagi 30 ta noto'g'ri fe'llarni amaliy mashqlar orqali mustahkamlang.</p>
+    <h1>Present Perfect Simple vs Continuous & 30 ta Noto'g'ri Fe'l (31–60)</h1>
+    <p class="subtitle">Present Perfect Simple (natija, son-sanoq) va Continuous (jarayon, ko'rinib turgan asorat), For / Since / How long davomiylik qoidalari hamda 31-dan 60-gacha bo'lgan 30 ta noto'g'ri fe'llar interaktiv trenajyori.</p>
 
-    <!-- CHEAT SHEET CARDS -->
+    <!-- CHEAT SHEET -->
     <div class="cheat-grid">
       <div class="cheat-card">
-        <div class="cheat-title">1️⃣ PPC FORMULASI</div>
-        <div class="cheat-rule"><b>I / You / We / They</b> &rarr; <code>have been + V-ing</code></div>
-        <div class="cheat-rule"><b>He / She / It / Aziz</b> &rarr; <code>has been + V-ing</code></div>
-        <div class="cheat-ex">"I have been waiting" / "She has been cooking"</div>
+        <div class="cheat-title">🎯 1. PRESENT PERFECT SIMPLE (have/has + V3)</div>
+        <div class="cheat-rule">Asosiy e'tibor: NATIJA, TUGALLANGAN ISH, SON-SANOQ!</div>
+        <div class="cheat-ex">• "I have written 3 emails today." (3 ta xat yozib bo'ldim - son bor!)<br>• "She has read this book twice." (Natija va tajriba)</div>
       </div>
       <div class="cheat-card">
-        <div class="cheat-title">2️⃣ FOR vs SINCE</div>
-        <div class="cheat-rule"><b>FOR</b> = Davomiylik (for 2 hours, for 5 days)</div>
-        <div class="cheat-rule"><b>SINCE</b> = Boshlangan vaqt (since morning, since 2021)</div>
-        <div class="cheat-ex">"for three days" vs "since yesterday"</div>
+        <div class="cheat-title">⏳ 2. PRESENT PERFECT CONTINUOUS (have/has + been + V-ing)</div>
+        <div class="cheat-rule">Asosiy e'tibor: JARAYON, DAVOMIYLIK, KO'RINIB TURGAN NATIJA!</div>
+        <div class="cheat-ex">• "I have been writing emails all morning." (Butun tong davom etgan jarayon)<br>• "Why are your clothes wet? — I've been washing the car." (Asorati ko'rinib turibdi)</div>
       </div>
       <div class="cheat-card">
-        <div class="cheat-title">3️⃣ 30 IRREGULAR VERBS (LATTER)</div>
-        <div class="cheat-rule">Noto'g'ri fe'llarning V2 va V3 shakllarini eslab qoling</div>
-        <div class="cheat-rule">make &rarr; made &rarr; made | see &rarr; saw &rarr; seen</div>
-        <div class="cheat-ex">take &rarr; took &rarr; taken | write &rarr; wrote &rarr; written</div>
+        <div class="cheat-title">⏰ 3. FOR vs SINCE vs HOW LONG</div>
+        <div class="cheat-rule">Davr (For) vs Boshlang'ich nuqta (Since)!</div>
+        <div class="cheat-ex">• <b>FOR + muddat:</b> for 2 hours, for 5 days, for 10 years, for ages.<br>• <b>SINCE + boshlangan vaqt:</b> since 9 AM, since yesterday, since 2019, since I was a child.<br>• <b>How long:</b> "How long have you lived here?" / "How long has it been raining?"</div>
       </div>
+      <div class="cheat-card">
+        <div class="cheat-title">🛑 4. STATIVE VERBS (Holat fe'llari) TUZOG'I</div>
+        <div class="cheat-rule">Holat fe'llari HECH QACHON Continuous zamonda kelmaydi!</div>
+        <div class="cheat-ex">• <b>know, like, have (egalik), understand, believe, want:</b><br>"I have known him for 5 years." ✅ ("have been knowing" ❌ XATO!)</div>
+      </div>
+    </div>
+
+    <div class="trap-box">
+      <div class="trap-title">⚠️ O'ZBEKCHA QOPQON (Eng katta xato):</div>
+      O'zbek tilida <i>"Men 3 yildan beri bu yerda yashayman"</i> deymiz — fe'l hozirgi zamonda! Shuning uchun o'quvchilar ko'pincha <i>"I live here for 3 years"</i> ❌ yoki <i>"I am living here since 3 years"</i> ❌ deb xato qilishadi. Ingliz tilida o'tmishda boshlanib hozirgacha davom etayotgan har qanday ish <b>faqat Present Perfect / Present Perfect Continuous</b> bilan keladi: <i>"I have lived / have been living here for 3 years"</i> ✅!
     </div>
   </header>
 
-  <!-- STUDENT DETAILS CARD -->
+  <!-- STUDENT CARD -->
   <div class="student-card">
     <div class="student-inputs">
       <div class="input-group">
-        <label>👤 Ism va Familiyangiz *</label>
-        <input type="text" id="studentName" placeholder="Masalan: Azizbek Karimov" oninput="saveDraft()">
+        <label>O'quvchi Ism va Familiyasi *</label>
+        <input type="text" id="studentName" placeholder="Masalan: Rayhona Aliyeva" oninput="saveDraft()">
       </div>
       <div class="input-group">
-        <label>📱 Telegram Username</label>
+        <label>Telegram Username (ixtiyoriy)</label>
         <input type="text" id="studentTelegram" placeholder="@username" oninput="saveDraft()">
       </div>
     </div>
   </div>
 
-  <!-- STICKY REAL-TIME SCORE BAR -->
+  <!-- STICKY REALTIME SCORE BAR -->
   <div class="sticky-score-bar">
     <div class="score-left">
-      <div class="score-badge" id="liveScoreBadge">0 / 65</div>
-      <div class="progress-info" id="progressInfoText">Javob berildi: 0 / 65 (0%)</div>
+      <span class="score-badge" id="liveScoreBadge">0 / 0</span>
+      <div>
+        <div class="progress-info" id="progressInfoText">Javob berildi: 0 / 0 (0%)</div>
+        <div style="font-size:0.75rem; color:#94a3b8;">Har bir savol tanlanganda natija darhol ko'rsatiladi</div>
+      </div>
     </div>
-    <div style="font-size:0.8rem; font-weight:700; color:#34d399;">⚡ Avtomatik tekshiruv</div>
     <div class="progress-bar-wrap">
       <div class="progress-bar-fill" id="progressBarFill"></div>
     </div>
   </div>
 
-  <!-- SECTION 1: 30 IRREGULAR VERBS TABLE (Latter group) -->
+  <!-- SECTION 1: 30 IRREGULAR VERBS TABLE (31-60) -->
   <div class="section-box">
-    <div class="sec-title">
-      <span>📚 1-Qism: 30 ta Noto'g'ri Fe'llar Lug'ati (Ikkinchi Guruh)</span>
+    <div class="sec-title">📚 1-BO'LIM: 30 ta Noto'g'ri Fe'llar Ro'yxati (31–60)</div>
+    <div class="sec-desc">Siz 1-bosqichda (1-30) muvaffaqiyatli o'tgansiz! Endi 2-bosqich: 31-dan 60-gacha bo'lgan 30 ta o'ta muhim noto'g'ri fe'llar. 🔊 tugmasini bosib to'g'ri talaffuzni tinglang.</div>
+
+    <div class="verb-search-wrap">
+      <input type="text" id="verbSearchInput" class="verb-search-input" placeholder="🔍 Fe'lni qidirish (give, go, know...)" oninput="filterVerbs()">
     </div>
-    <div class="sec-desc">Ushbu 30 ta fe'lni diqqat bilan o'rganing. Pastdagi mashqlarda aynan shu fe'llarning shakllari so'raladi:</div>
-    
+
     <div class="verb-table-wrap">
-      <table class="verb-table">
+      <table class="verb-table" id="verbsTable">
         <thead>
           <tr>
             <th>#</th>
@@ -315,563 +339,489 @@
             <th>V2 (Past Simple)</th>
             <th>V3 (Past Participle)</th>
             <th>O'zbekcha Ma'nosi</th>
-            <th>Tinglash</th>
+            <th>Ovoz</th>
           </tr>
         </thead>
-        <tbody id="verbTableBody"></tbody>
+        <tbody id="verbsTbody">
+          <!-- Populated by JS -->
+        </tbody>
       </table>
     </div>
   </div>
 
-  <!-- SECTION 2: 15 IRREGULAR VERBS QUIZ -->
+  <!-- SECTION 2: IRREGULAR VERBS INSTANT QUIZ (15 ITEMS) -->
   <div class="section-box">
-    <div class="sec-title">
-      <span>🎯 2-Qism: Noto'g'ri Fe'llar Sinovi (15 ta Savol)</span>
-    </div>
-    <div class="sec-desc">Berilgan fe'lning to'g'ri V2 yoki V3 shaklini tanlang:</div>
-    <div id="irregularQuizContainer"></div>
+    <div class="sec-title">⚡ 2-BO'LIM: 30 Noto'g'ri Fe'l Bo'yicha Test (31–60) (15 ta)</div>
+    <div class="sec-desc">Variantni tanlang. Natija (to'g'ri/noto'g'ri) va izohi darhol ko'rsatiladi!</div>
+    <div id="verbsQuizContainer"></div>
   </div>
 
-  <!-- SECTION 3: HAVE BEEN vs HAS BEEN -->
+  <!-- SECTION 3: PRESENT PERFECT SIMPLE VS CONTINUOUS & FOR/SINCE (16 ITEMS) -->
   <div class="section-box">
-    <div class="sec-title">
-      <span>⚖️ 3-Qism: HAVE BEEN yoki HAS BEEN? (10 ta Savol)</span>
-    </div>
-    <div class="sec-desc">Egalarga (I, you, he, she, we, they) qarab to'g'ri yordamchi fe'lni tanlang:</div>
-    <div id="haveHasContainer"></div>
+    <div class="sec-title">🎯 3-BO'LIM: PP Simple vs Continuous & For/Since Testi (16 ta)</div>
+    <div class="sec-desc">Natija (son-sanoq) va jarayon (davomiylik) farqini, for vs since qo'llanilishini tekshiring. Javobni bosishingiz bilan tushuntirish chiqadi!</div>
+    <div id="grammarQuizContainer"></div>
   </div>
 
-  <!-- SECTION 4: VERB + ING FORMATION -->
+  <!-- SECTION 4: MISTAKE HUNTER (6 ITEMS) -->
   <div class="section-box">
-    <div class="sec-title">
-      <span>⚡ 4-Qism: Fe'lga -ING qo'shish qoidalari (10 ta Savol)</span>
-    </div>
-    <div class="sec-desc">Fe'llarning to'g'ri <code>-ing</code> shaklini toping (swim &rarr; swimming, write &rarr; writing):</div>
-    <div id="ingContainer"></div>
-  </div>
-
-  <!-- SECTION 5: FOR vs SINCE -->
-  <div class="section-box">
-    <div class="sec-title">
-      <span>⏳ 5-Qism: FOR yoki SINCE? (12 ta Savol)</span>
-    </div>
-    <div class="sec-desc">Vaqt iborasiga qarab FOR (davr) yoki SINCE (boshlanish nuqtasi)ni tanlang:</div>
-    <div id="forSinceContainer"></div>
-  </div>
-
-  <!-- SECTION 6: MISTAKE HUNTER -->
-  <div class="section-box">
-    <div class="sec-title">
-      <span>🔍 6-Qism: Xato Ovchisi (Mistake Hunter — 6 ta Gap)</span>
-    </div>
-    <div class="sec-desc">Gapdagi bitta xatoni toping va uning to'g'ri variantini belgilang:</div>
+    <div class="sec-title">🕵️ 4-BO'LIM: Xato Ovchisi (Mistake Hunter - 6 ta)</div>
+    <div class="sec-desc">Gapdagi asosiy grammatik xatoni bosing va to'g'ri qoidani bilib oling!</div>
     <div id="hunterContainer"></div>
   </div>
 
-  <!-- SECTION 7: SCRAMBLE SENTENCE BUILDER -->
+  <!-- SECTION 5: SENTENCE BUILDER / SCRAMBLE (6 ITEMS) -->
   <div class="section-box">
-    <div class="sec-title">
-      <span>🧩 7-Qism: Gap Tuzuvchi (Scramble Builder — 6 ta Gap)</span>
-    </div>
-    <div class="sec-desc">So'zlarni to'g'ri tartibda bosib, to'liq Present Perfect Continuous gap hosil qiling:</div>
+    <div class="sec-title">🧩 5-BO'LIM: Gap Tuzuvchi (Sentence Builder - 6 ta)</div>
+    <div class="sec-desc">So'zlarni to'g'ri tartibda bosing va "Tekshirish" tugmasini bosing.</div>
     <div id="scrambleContainer"></div>
   </div>
 
-  <!-- SECTION 8: SITUATIONAL MCQS -->
+  <!-- SECTION 6: TRANSLATION CHALLENGE (6 ITEMS) -->
   <div class="section-box">
-    <div class="sec-title">
-      <span>💡 8-Qism: Kundalik Vaziyatlar Testi (6 ta Savol)</span>
-    </div>
-    <div class="sec-desc">Vaziyatga mos to'g'ri gapni tanlang:</div>
-    <div id="mcqContainer"></div>
-  </div>
-
-  <!-- SECTION 9: GUIDED TRANSLATIONS -->
-  <div class="section-box">
-    <div class="sec-title">
-      <span>✍️ 9-Qism: O'zbekchadan Inglizchaga Tarjima (6 ta Gap)</span>
-    </div>
-    <div class="sec-desc">Yordamchi ko'rsatma (hint) yordamida gaplarni yozing:</div>
+    <div class="sec-title">✍️ 6-BO'LIM: O'zbekchadan Inglizchaga Tarjima (6 ta)</div>
+    <div class="sec-desc">Gapni ingliz tiliga tarjima qiling va "Tekshirish" tugmasini bosib namunani ko'ring.</div>
     <div id="transContainer"></div>
   </div>
 
-  <!-- SECTION 10: PERSONAL REFLECTION -->
+  <!-- SECTION 7: PERSONAL PRODUCTION (3 QUESTIONS) -->
   <div class="section-box">
-    <div class="sec-title">
-      <span>🌟 10-Qism: O'zingiz Haqida 3 ta Kichik Gap</span>
-    </div>
-    <div class="sec-desc">Berilgan namuna asosida o'zingiz haqingizda Present Perfect Continuous bilan gap yozing:</div>
-    
-    <div class="trans-item">
-      <div class="trans-prompt">1. Qancha vaqtdan beri ingliz tili o'rganmoqdasiz?</div>
-      <div class="trans-hint">Namuna: <i>I have been learning English for 3 months.</i> yoki <i>I have been studying English since September.</i></div>
-      <input type="text" id="profile1" placeholder="I have been learning English..." oninput="saveDraft()">
-    </div>
-
-    <div class="trans-item">
-      <div class="trans-prompt">2. Bugun ertalabdan beri nima bilan bandsiz?</div>
-      <div class="trans-hint">Namuna: <i>I have been doing my homework since morning.</i> yoki <i>I have been working all day.</i></div>
-      <input type="text" id="profile2" placeholder="I have been..." oninput="saveDraft()">
-    </div>
-
-    <div class="trans-item">
-      <div class="trans-prompt">3. Qaysi shaharda qancha vaqtdan beri yashayapsiz?</div>
-      <div class="trans-hint">Namuna: <i>I have been living in Tashkent for 5 years.</i></div>
-      <input type="text" id="profile3" placeholder="I have been living in..." oninput="saveDraft()">
+    <div class="sec-title">🌟 7-BO'LIM: Shaxsiy Tajriba Inshosi (3 ta savol)</div>
+    <div class="sec-desc">O'zingiz haqida Present Perfect Simple va Continuous zamonlarida javob yozing:</div>
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <div>
+        <label style="font-weight:700; color:#6ee7b7; display:block; margin-bottom:6px;">1. Qancha vaqtdan beri ingliz tilini o'rganayapsiz? (Use: have been learning English for/since...):</label>
+        <textarea id="prod1" rows="2" placeholder="Masalan: I have been learning English for four months..." oninput="saveDraft()"></textarea>
+      </div>
+      <div>
+        <label style="font-weight:700; color:#6ee7b7; display:block; margin-bottom:6px;">2. Bugun ertalabdan beri nimalar qildingiz? (Use PP Simple with numbers: I have done/written/eaten...):</label>
+        <textarea id="prod2" rows="2" placeholder="Masalan: Today I have drunk two cups of tea and I have watched one lesson..." oninput="saveDraft()"></textarea>
+      </div>
+      <div>
+        <label style="font-weight:700; color:#6ee7b7; display:block; margin-bottom:6px;">3. Eng yaqin do'stingizni qachondan beri taniysiz? (Remember: 'know' is stative! I have known him/her for/since...):</label>
+        <textarea id="prod3" rows="2" placeholder="Masalan: I have known my best friend since 2018..." oninput="saveDraft()"></textarea>
+      </div>
     </div>
   </div>
 
-  <!-- SUBMISSION -->
+  <!-- SUBMIT CARD -->
   <div class="submit-card">
-    <h3 style="font-size:1.4rem; font-weight:800; margin-bottom:10px;">Vazifani Ustozga Yuborish</h3>
-    <p style="color:#cbd5e1; font-size:0.92rem; margin-bottom:20px; max-width:600px; margin-left:auto; margin-right:auto;">Barcha javoblaringiz, ballingiz va yozgan tarjimalaringiz to'g'ridan-to'g'ri ustozingizning Telegram botiga hisobot sifatida yuboriladi.</p>
     <button class="submit-btn" id="submitBtn" onclick="submitToTelegram()">🚀 Vazifani Topshirish</button>
-    <div class="status-msg" id="statusMsg"></div>
+    <div class="status-msg" id="statusMsg">Barcha savollarga javob berib, natijangizni ustozga yuboring!</div>
   </div>
 
 </div>
 
 <script>
-  // TELEGRAM CONFIGURATION
   const BOT_TOKEN = '8664328884:AAGQcZk5Y3wRQVrICE-W06b60_zFemdNgIs';
   const TEACHER_IDS = ['6315515792', '7957347033'];
-  const STORAGE_KEY = 'teacheros_hw_a1_ppc_irregular_lab';
+  const STORAGE_KEY = 'ulunur_a1_pp_continuous_v2';
 
-  // 30 IRREGULAR VERBS (LATTER GROUP)
-  const IRREGULAR_VERBS_30 = [
-    { id: 1, v1: "keep", v2: "kept", v3: "kept", uz: "saqlamoq / davom ettirmoq" },
-    { id: 2, v1: "know", v2: "knew", v3: "known", uz: "bilmoq / tanimoq" },
-    { id: 3, v1: "leave", v2: "left", v3: "left", uz: "tark etmoq / qoldirmoq" },
-    { id: 4, v1: "lend", v2: "lent", v3: "lent", uz: "qarz bermoq" },
-    { id: 5, v1: "lose", v2: "lost", v3: "lost", uz: "yo'qotmoq / yutqazmoq" },
-    { id: 6, v1: "make", v2: "made", v3: "made", uz: "yasamoq / tayyorlamoq" },
-    { id: 7, v1: "meet", v2: "met", v3: "met", uz: "uchrashmoq / tanishmoq" },
-    { id: 8, v1: "pay", v2: "paid", v3: "paid", uz: "to'lamoq" },
-    { id: 9, v1: "put", v2: "put", v3: "put", uz: "qo'ymoq" },
-    { id: 10, v1: "read", v2: "read [red]", v3: "read [red]", uz: "o'qimoq" },
-    { id: 11, v1: "ride", v2: "rode", v3: "ridden", uz: "minmoq (ot, velosiped)" },
-    { id: 12, v1: "ring", v2: "rang", v3: "rung", uz: "qo'ng'iroq qilmoq" },
-    { id: 13, v1: "run", v2: "ran", v3: "run", uz: "yugurmoq" },
-    { id: 14, v1: "say", v2: "said", v3: "said", uz: "aytmoq" },
-    { id: 15, v1: "see", v2: "saw", v3: "seen", uz: "ko'rmoq" },
-    { id: 16, v1: "sell", v2: "sold", v3: "sold", uz: "sotmoq" },
-    { id: 17, v1: "send", v2: "sent", v3: "sent", uz: "jo'natmoq / yubormoq" },
-    { id: 18, v1: "sing", v2: "sang", v3: "sung", uz: "kuylamoq / ashula aytmoq" },
-    { id: 19, v1: "sit", v2: "sat", v3: "sat", uz: "o'tirmoq" },
-    { id: 20, v1: "sleep", v2: "slept", v3: "slept", uz: "uxlamoq" },
-    { id: 21, v1: "speak", v2: "spoke", v3: "spoken", uz: "gapirmoq" },
-    { id: 22, v1: "spend", v2: "spent", v3: "spent", uz: "sarflamoq / o'tkazmoq" },
-    { id: 23, v1: "stand", v2: "stood", v3: "stood", uz: "turmoq / tik turmoq" },
-    { id: 24, v1: "swim", v2: "swam", v3: "swum", uz: "suzmoq" },
-    { id: 25, v1: "take", v2: "took", v3: "taken", uz: "olmoq" },
-    { id: 26, v1: "teach", v2: "taught", v3: "taught", uz: "o'rgatmoq / dars bermoq" },
-    { id: 27, v1: "tell", v2: "told", v3: "told", uz: "gapirib bermoq" },
-    { id: 28, v1: "think", v2: "thought", v3: "thought", uz: "o'ylamoq" },
-    { id: 29, v1: "understand", v2: "understood", v3: "understood", uz: "tushunmoq" },
-    { id: 30, v1: "wear", v2: "wore", v3: "worn", uz: "kiymoq / taqmoq" }
+  const VERBS = [{"v1":"forget","v2":"forgot","v3":"forgotten","uz":"unutmoq"},{"v1":"forgive","v2":"forgave","v3":"forgiven","uz":"kechirmoq"},{"v1":"freeze","v2":"froze","v3":"frozen","uz":"muzlamoq, muzlatmoq"},{"v1":"get","v2":"got","v3":"got / gotten","uz":"olmoq, yetib bormoq"},{"v1":"give","v2":"gave","v3":"given","uz":"bermoq"},{"v1":"go","v2":"went","v3":"gone","uz":"bormoq"},{"v1":"grow","v2":"grew","v3":"grown","uz":"o'smoq, o'stirmoq"},{"v1":"hang","v2":"hung","v3":"hung","uz":"osmoq, osilib turmoq"},{"v1":"have","v2":"had","v3":"had","uz":"ega bo'lmoq"},{"v1":"hear","v2":"heard","v3":"heard","uz":"eshitmoq"},{"v1":"hide","v2":"hid","v3":"hidden","uz":"yashirmoq, yashirinmoq"},{"v1":"hit","v2":"hit","v3":"hit","uz":"urmoq"},{"v1":"hold","v2":"held","v3":"held","uz":"ushlab turmoq"},{"v1":"hurt","v2":"hurt","v3":"hurt","uz":"jarohatlamoq, og'rimoq"},{"v1":"keep","v2":"kept","v3":"kept","uz":"saqlamoq, davom ettirmoq"},{"v1":"know","v2":"knew","v3":"known","uz":"bilmoq, tanimoq"},{"v1":"lay","v2":"laid","v3":"laid","uz":"qo'ymoq, yotqizmoq"},{"v1":"lead","v2":"led","v3":"led","uz":"yetaklamoq, boshqarmoq"},{"v1":"leave","v2":"left","v3":"left","uz":"tark etmoq, ketmoq"},{"v1":"lend","v2":"lent","v3":"lent","uz":"qarzga bermoq"},{"v1":"let","v2":"let","v3":"let","uz":"ruxsat bermoq, qo'yib bermoq"},{"v1":"lie","v2":"lay","v3":"lain","uz":"yotmoq (to lie down)"},{"v1":"lose","v2":"lost","v3":"lost","uz":"yo'qotmoq, yutqazmoq"},{"v1":"make","v2":"made","v3":"made","uz":"yasamoq, qilmoq"},{"v1":"mean","v2":"meant","v3":"meant","uz":"anglatmoq, nazarda tutmoq"},{"v1":"meet","v2":"met","v3":"met","uz":"uchrashmoq, tanishmoq"},{"v1":"pay","v2":"paid","v3":"paid","uz":"to'lamoq"},{"v1":"put","v2":"put","v3":"put","uz":"qo'ymoq"},{"v1":"read","v2":"read (red)","v3":"read (red)","uz":"o'qimoq"},{"v1":"ride","v2":"rode","v3":"ridden","uz":"minmoq (ot, velosiped)"}];
+
+  // 15 VERBS QUIZ ITEMS (Verbs 31-60)
+  const VERB_QUIZ_ITEMS = [
+    { id: 'vq1', q: "Fe'lning V2 va V3 shakli qaysi: <code>forget</code> (unutmoq)?", opts: ["forgot / forgotten", "forgot / forgot", "forgetted / forgetted", "forgat / forgatten"], ans: "forgot / forgotten", expl: "forget ➔ forgot (V2) ➔ forgotten (V3)." },
+    { id: 'vq2', q: "Fe'lning V2 (Past Simple) shakli qaysi: <code>forgive</code> (kechirmoq)?", opts: ["forgave", "forgiven", "forgived", "forgive"], ans: "forgave", expl: "forgive ➔ forgave (V2) ➔ forgiven (V3)." },
+    { id: 'vq3', q: "Fe'lning V3 (Past Participle) shakli qaysi: <code>freeze</code> (muzlamoq)?", opts: ["frozen", "froze", "freezed", "frosted"], ans: "frozen", expl: "freeze ➔ froze (V2) ➔ frozen (V3)." },
+    { id: 'vq4', q: "Fe'lning V2 va V3 shakli qaysi: <code>give</code> (bermoq)?", opts: ["gave / given", "gave / gave", "gived / gived", "give / given"], ans: "gave / given", expl: "give ➔ gave (V2) ➔ given (V3)." },
+    { id: 'vq5', q: "Fe'lning V3 shakli qaysi: <code>grow</code> (o'smoq, o'stirmoq)?", opts: ["grown", "grew", "growed", "growing"], ans: "grown", expl: "grow ➔ grew (V2) ➔ grown (V3)." },
+    { id: 'vq6', q: "Fe'lning V2 va V3 shakli qaysi: <code>hear</code> (eshitmoq)?", opts: ["heard / heard", "heared / heared", "hard / hard", "heard / hearden"], ans: "heard / heard", expl: "hear ➔ heard ➔ heard." },
+    { id: 'vq7', q: "Fe'lning V3 shakli qaysi: <code>hide</code> (yashirmoq)?", opts: ["hidden", "hid", "hided", "hiding"], ans: "hidden", expl: "hide ➔ hid (V2) ➔ hidden (V3)." },
+    { id: 'vq8', q: "Fe'lning V2 va V3 shakli qaysi: <code>hit</code> (urmoq)?", opts: ["hit / hit", "hitted / hitted", "hat / hut", "hit / hitten"], ans: "hit / hit", expl: "hit ➔ hit ➔ hit (uchala shakli ham bir xil!)." },
+    { id: 'vq9', q: "Fe'lning V2 va V3 shakli qaysi: <code>hold</code> (ushlab turmoq)?", opts: ["held / held", "holded / holded", "halt / halt", "held / holden"], ans: "held / held", expl: "hold ➔ held ➔ held." },
+    { id: 'vq10', q: "Fe'lning V2 va V3 shakli qaysi: <code>hurt</code> (jarohatlamoq, og'rimoq)?", opts: ["hurt / hurt", "hurted / hurted", "hart / hart", "hurt / hurten"], ans: "hurt / hurt", expl: "hurt ➔ hurt ➔ hurt (o'zgarmaydi!)." },
+    { id: 'vq11', q: "Fe'lning V3 shakli qaysi: <code>know</code> (bilmoq, tanimoq)?", opts: ["known", "knew", "knowed", "knowen"], ans: "known", expl: "know ➔ knew (V2) ➔ known (V3)." },
+    { id: 'vq12', q: "Fe'lning V2 va V3 shakli qaysi: <code>leave</code> (tark etmoq)?", opts: ["left / left", "leaved / leaved", "lefted / lefted", "lave / laven"], ans: "left / left", expl: "leave ➔ left ➔ left." },
+    { id: 'vq13', q: "Fe'lning V2 va V3 shakli qaysi: <code>lose</code> (yo'qotmoq)?", opts: ["lost / lost", "losed / losed", "loost / loost", "lost / losten"], ans: "lost / lost", expl: "lose ➔ lost ➔ lost." },
+    { id: 'vq14', q: "Fe'lning V2 va V3 shakli qaysi: <code>pay</code> (to'lamoq)?", opts: ["paid / paid", "payed / payed", "pad / pad", "paid / paiden"], ans: "paid / paid", expl: "pay ➔ paid ➔ paid." },
+    { id: 'vq15', q: "Fe'lning V3 shakli qaysi: <code>ride</code> (minmoq)?", opts: ["ridden", "rode", "rided", "roden"], ans: "ridden", expl: "ride ➔ rode (V2) ➔ ridden (V3)." }
   ];
 
-  // 15 IRREGULAR VERB QUIZ ITEMS
-  const IRREGULAR_QUIZ_ITEMS = [
-    { id: 1, q: "make fe'lining o'tgan zamon (V2) shakli qaysi?", opts: ["made", "maked", "make", "maded"], ans: "made", expl: "make &rarr; MADE &rarr; made." },
-    { id: 2, q: "see fe'lining 3-shakli (V3 - Past Participle) qaysi?", opts: ["seen", "saw", "seed", "seeing"], ans: "seen", expl: "see &rarr; saw &rarr; SEEN." },
-    { id: 3, q: "take fe'lining 3-shakli (V3) qaysi?", opts: ["taken", "took", "taked", "taking"], ans: "taken", expl: "take &rarr; took &rarr; TAKEN." },
-    { id: 4, q: "write fe'lining o'tgan zamon (V2) shakli qaysi?", opts: ["wrote", "written", "writed", "write"], ans: "wrote", expl: "write &rarr; WROTE &rarr; written." },
-    { id: 5, q: "speak fe'lining 3-shakli (V3) qaysi?", opts: ["spoken", "spoke", "speaked", "speaking"], ans: "spoken", expl: "speak &rarr; spoke &rarr; SPOKEN." },
-    { id: 6, q: "run fe'lining o'tgan zamon (V2) shakli qaysi?", opts: ["ran", "run", "runned", "running"], ans: "ran", expl: "run &rarr; RAN &rarr; run." },
-    { id: 7, q: "sleep fe'lining o'tgan zamon (V2) shakli qaysi?", opts: ["slept", "sleeped", "sleept", "sleeping"], ans: "slept", expl: "sleep &rarr; SLEPT &rarr; slept." },
-    { id: 8, q: "swim fe'lining 3-shakli (V3) qaysi?", opts: ["swum", "swam", "swimmed", "swimming"], ans: "swum", expl: "swim &rarr; swam &rarr; SWUM." },
-    { id: 9, q: "teach (o'rgatmoq) fe'lining o'tgan shakli qaysi?", opts: ["taught", "teached", "thought", "touch"], ans: "taught", expl: "teach &rarr; TAUGHT &rarr; taught." },
-    { id: 10, q: "think (o'ylamoq) fe'lining o'tgan shakli qaysi?", opts: ["thought", "taught", "thinked", "thinking"], ans: "thought", expl: "think &rarr; THOUGHT &rarr; thought." },
-    { id: 11, q: "leave (ketmoq) fe'lining o'tgan shakli qaysi?", opts: ["left", "leaved", "lefted", "leaves"], ans: "left", expl: "leave &rarr; LEFT &rarr; left." },
-    { id: 12, q: "lose (yo'qotmoq) fe'lining o'tgan shakli qaysi?", opts: ["lost", "losed", "loosed", "loss"], ans: "lost", expl: "lose &rarr; LOST &rarr; lost." },
-    { id: 13, q: "sing (kuylamoq) fe'lining 3-shakli (V3) qaysi?", opts: ["sung", "sang", "singed", "song"], ans: "sung", expl: "sing &rarr; sang &rarr; SUNG." },
-    { id: 14, q: "know (bilmoq) fe'lining 3-shakli (V3) qaysi?", opts: ["known", "knew", "knowed", "knowing"], ans: "known", expl: "know &rarr; knew &rarr; KNOWN." },
-    { id: 15, q: "wear (kiymoq) fe'lining 3-shakli (V3) qaysi?", opts: ["worn", "wore", "weared", "wearing"], ans: "worn", expl: "wear &rarr; wore &rarr; WORN." }
-  ];
-
-  // 10 HAVE BEEN vs HAS BEEN ITEMS
-  const HAVE_HAS_ITEMS = [
-    { id: 1, prompt: "I ______ waiting for the bus for 30 minutes.", ans: "have been", expl: "'I' olmoshiga 'have been' to'g'ri keladi: I have been waiting." },
-    { id: 2, prompt: "She ______ cooking dinner since 5 o'clock.", ans: "has been", expl: "'She' olmoshiga 'has been' ishlatiladi: She has been cooking." },
-    { id: 3, prompt: "My brother ______ studying English for two hours.", ans: "has been", expl: "'My brother' = He (u), bitta shaxs bo'lgani uchun 'has been'." },
-    { id: 4, prompt: "We ______ playing football since morning.", ans: "have been", expl: "'We' (biz) ko'plikda 'have been' oladi." },
-    { id: 5, prompt: "They ______ watching TV all evening.", ans: "have been", expl: "'They' (ular) bilan 'have been' ishlatiladi." },
-    { id: 6, prompt: "Aziz ______ working on his computer since noon.", ans: "has been", expl: "Aziz = bitta o'g'il bola (He), shuning uchun 'has been'." },
-    { id: 7, prompt: "You ______ sleeping for 10 hours!", ans: "have been", expl: "'You' olmoshiga har doim 'have been' keladi." },
-    { id: 8, prompt: "It ______ raining since yesterday.", ans: "has been", expl: "Ob-havo va 'It' uchun 'has been' to'g'ri: It has been raining." },
-    { id: 9, prompt: "My parents ______ living in this city for 20 years.", ans: "have been", expl: "'My parents' = They (ota-onam, ko'plik), shuning uchun 'have been'." },
-    { id: 10, prompt: "The baby ______ crying for 15 minutes.", ans: "has been", expl: "'The baby' = bitta chaqaloq, shuning uchun 'has been'." }
-  ];
-
-  // 10 VERB + ING ITEMS
-  const ING_ITEMS = [
-    { id: 1, prompt: "wait &rarr; (kutmoq)", opts: ["waiting", "waitting", "wait", "waited"], ans: "waiting", expl: "Oddiy qo'shilish: wait &rarr; waiting." },
-    { id: 2, prompt: "swim &rarr; (suzmoq)", opts: ["swimming", "swiming", "swim", "swam"], ans: "swimming", expl: "Oxirgi unli + undosh takrorlanadi: swim &rarr; swimming." },
-    { id: 3, prompt: "write &rarr; (yozmoq)", opts: ["writing", "writeing", "writting", "written"], ans: "writing", expl: "Oxiridagi 'e' tushib qoladi: write &rarr; writing." },
-    { id: 4, prompt: "run &rarr; (yugurmoq)", opts: ["running", "runing", "ran", "run"], ans: "running", expl: "Oxirgi undosh takrorlanadi: run &rarr; running." },
-    { id: 5, prompt: "read &rarr; (o'qimoq)", opts: ["reading", "readding", "read", "readed"], ans: "reading", expl: "Ikkita unli bo'lgani uchun takrorlanmaydi: read &rarr; reading." },
-    { id: 6, prompt: "make &rarr; (yasamoq)", opts: ["making", "makeing", "makking", "made"], ans: "making", expl: "Oxiridagi 'e' tushib qoladi: make &rarr; making." },
-    { id: 7, prompt: "sleep &rarr; (uxlamoq)", opts: ["sleeping", "sleepping", "sleep", "slept"], ans: "sleeping", expl: "sleep &rarr; sleeping (oddiy qo'shiladi)." },
-    { id: 8, prompt: "sit &rarr; (o'tirmoq)", opts: ["sitting", "siting", "sitted", "sat"], ans: "sitting", expl: "Oxirgi 't' harfi takrorlanadi: sit &rarr; sitting." },
-    { id: 9, prompt: "study &rarr; (o'rganmoq)", opts: ["studying", "studing", "studyed", "studies"], ans: "studying", expl: "'y' harfi saqlanib qoladi: study &rarr; studying." },
-    { id: 10, prompt: "live &rarr; (yashamoq)", opts: ["living", "liveing", "livving", "lived"], ans: "living", expl: "Oxiridagi 'e' tushadi: live &rarr; living." }
-  ];
-
-  // 12 FOR vs SINCE ITEMS
-  const FOR_SINCE_ITEMS = [
-    { id: 1, prompt: "She has been reading ______ two hours.", ans: "for", expl: "'two hours' (2 soat) — bu vaqt davomiyligi, shuning uchun FOR." },
-    { id: 2, prompt: "I have been waiting here ______ 9 o'clock.", ans: "since", expl: "'9 o'clock' (soat 9 dan) — boshlang'ich aniq vaqt, shuning uchun SINCE." },
-    { id: 3, prompt: "They have been playing ______ morning.", ans: "since", expl: "'morning' (ertalabdan) — boshlangan vaqt, shuning uchun SINCE." },
-    { id: 4, prompt: "He has been working ______ three days.", ans: "for", expl: "'three days' (3 kun davomida) — vaqt oralig'i, shuning uchun FOR." },
-    { id: 5, prompt: "We have been living in Samarkand ______ 2020.", ans: "since", expl: "'2020' — boshlangan yil, shuning uchun SINCE." },
-    { id: 6, prompt: "It has been raining ______ a long time.", ans: "for", expl: "'a long time' (uzoq vaqtdan beri) — davomiylik, shuning uchun FOR." },
-    { id: 7, prompt: "She has been cooking ______ 30 minutes.", ans: "for", expl: "'30 minutes' (30 daqiqa) — vaqt miqdori, shuning uchun FOR." },
-    { id: 8, prompt: "I have been studying ______ yesterday.", ans: "since", expl: "'yesterday' (kechadan beri) — boshlangan nuqta, shuning uchun SINCE." },
-    { id: 9, prompt: "My brother has been driving ______ five hours.", ans: "for", expl: "'five hours' (5 soat) — vaqt oralig'i, shuning uchun FOR." },
-    { id: 10, prompt: "We have been talking on the phone ______ 2 PM.", ans: "since", expl: "'2 PM' (soat 14:00 dan) — aniq vaqt, shuning uchun SINCE." },
-    { id: 11, prompt: "The baby has been crying ______ 20 minutes.", ans: "for", expl: "'20 minutes' — davr, shuning uchun FOR." },
-    { id: 12, prompt: "They have been building this house ______ last year.", ans: "since", expl: "'last year' (o'tgan yildan beri) — boshlang'ich vaqt, shuning uchun SINCE." }
+  // 16 GRAMMAR QUIZ ITEMS (PP Simple vs Continuous & For/Since)
+  const GRAMMAR_QUIZ_ITEMS = [
+    {
+      id: 'gq1',
+      q: "I ______ this book for two hours, and I ______ 40 pages so far.",
+      opts: ["have been reading / have read", "have read / have been reading", "am reading / read", "read / have read"],
+      ans: "have been reading / have read",
+      expl: "Ikki soatdan beri davom etayotgan jarayon uchun PPC ('have been reading'), 40 sahifa degan aniq son/natija uchun esa PP Simple ('have read') ishlatiladi!"
+    },
+    {
+      id: 'gq2',
+      q: "Look at his hands! They are covered in paint because he ______ the kitchen.",
+      opts: ["has been painting", "has painted", "is painting", "painted"],
+      ans: "has been painting",
+      expl: "Ko'rinib turgan natija (qo'llari bo'yoq) yaqinda davom etgan jarayon oqibati bo'lgani uchun Present Perfect Continuous ('has been painting') to'g'ri."
+    },
+    {
+      id: 'gq3',
+      q: "I ______ my best friend ______ we were in primary school.",
+      opts: ["have known / since", "have been knowing / since", "know / for", "have known / for"],
+      ans: "have known / since",
+      expl: "'Know' holat fe'li bo'lib, hech qachon continuous (-ing) shaklini olmaydi! 'Primary school' esa boshlang'ich nuqta bo'lgani uchun 'since' kerak."
+    },
+    {
+      id: 'gq4',
+      q: "They ______ in Samarkand ______ over fifteen years.",
+      opts: ["have lived / for", "have lived / since", "are living / since", "live / for"],
+      ans: "have lived / for",
+      expl: "'Fifteen years' (15 yil) — bu vaqt oralig'i (davr), shuning uchun 'for' ishlatiladi. O'tmishdan hozirgacha: 'have lived for 15 years'."
+    },
+    {
+      id: 'gq5',
+      q: "How long ______ you ______ for the bus? You look cold!",
+      opts: ["have / been waiting", "are / waiting", "did / wait", "have / waited"],
+      ans: "have / been waiting",
+      expl: "'How long' bilan hozirgacha davom etayotgan jarayonni so'rash uchun: 'have you been waiting'."
+    },
+    {
+      id: 'gq6',
+      q: "She ______ five cups of tea today.",
+      opts: ["has drunk", "has been drinking", "is drinking", "drank"],
+      ans: "has drunk",
+      expl: "Gapda aniq son bor ('five cups')! Son yoki miqdor ko'rsatilganda Continuous ishlatilmaydi, faqat PP Simple: 'has drunk'."
+    },
+    {
+      id: 'gq7',
+      q: "It has been raining non-stop ______ 7 o'clock this morning.",
+      opts: ["since", "for", "from", "during"],
+      ans: "since",
+      expl: "'7 o'clock this morning' — aniq boshlangan nuqta. Shuning uchun 'since' to'g'ri."
+    },
+    {
+      id: 'gq8',
+      q: "We ______ each other ______ a very long time.",
+      opts: ["have known / for", "have been knowing / for", "know / since", "have known / since"],
+      ans: "have known / for",
+      expl: "'A very long time' — davr (for). 'Know' — stative fe'l ('have known')."
+    },
+    {
+      id: 'gq9',
+      q: "Why are you out of breath? — I ______ in the park.",
+      opts: ["have been running", "have run", "ran", "am running"],
+      ans: "have been running",
+      expl: "Nafasi qisib qolgani (jismoniy asorat) — hozirgina tugagan yoki davom etgan yugurish jarayoni natijasi: 'have been running'."
+    },
+    {
+      id: 'gq10',
+      q: "She ______ this red bicycle ______ 2021.",
+      opts: ["has had / since", "has been having / since", "has / for", "had / since"],
+      ans: "has had / since",
+      expl: "'Have' egalik ma'nosida stative fe'l bo'lgani sababli -ing olmaydi ('has had'). 2021 — boshlang'ich yil ('since')."
+    },
+    {
+      id: 'gq11',
+      q: "I ______ three emails this afternoon, but I haven't sent them yet.",
+      opts: ["have written", "have been writing", "wrote", "am writing"],
+      ans: "have written",
+      expl: "Aniq son ('three emails') tugallangan ish natijasini bildiradi ➔ 'have written'."
+    },
+    {
+      id: 'gq12',
+      q: "The baby is crying because she ______ for her mother since morning.",
+      opts: ["has been crying", "cried", "is crying", "has cried"],
+      ans: "has been crying",
+      expl: "Ertalabdan beri davom etayotgan yig'i jarayoni ➔ 'has been crying since morning'."
+    },
+    {
+      id: 'gq13',
+      q: "How many chapters ______ you ______ so far?",
+      opts: ["have / read", "have / been reading", "are / reading", "did / read"],
+      ans: "have / read",
+      expl: "'How many' (qancha dona) deb so'ralganda natija so'raladi, shuning uchun PP Simple ('have you read')."
+    },
+    {
+      id: 'gq14',
+      q: "He is exhausted because he ______ hard in the garden all day.",
+      opts: ["has been working", "has worked", "worked", "is working"],
+      ans: "has been working",
+      expl: "'All day' davomiylik ko'rsatkichi va charchoq asorati ➔ 'has been working'."
+    },
+    {
+      id: 'gq15',
+      q: "We haven't seen our teacher ______ last Thursday.",
+      opts: ["since", "for", "from", "at"],
+      ans: "since",
+      expl: "'Last Thursday' (o'tgan payshanba) — ma'lum boshlang'ich nuqta ➔ 'since'."
+    },
+    {
+      id: 'gq16',
+      q: "My sister ______ English ______ three years now.",
+      opts: ["has been learning / for", "learns / for", "has learned / since", "is learning / since"],
+      ans: "has been learning / for",
+      expl: "'Three years' — davr (for). Jarayon davom etmoqda: 'has been learning for three years'."
+    }
   ];
 
   // 6 MISTAKE HUNTER ITEMS
   const HUNTER_ITEMS = [
     {
-      id: 1,
-      bad: "I am waiting for you for two hours.",
-      q: "Ushbu gapda nima xato? (2 soatdan beri kutayapman)",
-      opts: ["'am waiting' &rarr; 'have been waiting'", "'for two hours' &rarr; 'since two hours'", "'you' &rarr; 'to you'"],
-      ans: "'am waiting' &rarr; 'have been waiting'",
-      expl: "O'tmishdan beri davom etayotgan ish 'am waiting' emas, 'have been waiting' bo'ladi!"
+      id: 'h1',
+      sentence: "I have been knowing Sarah for more than eight years.",
+      error: "have been knowing",
+      correction: "have known",
+      expl: "'Know' (bilmoq, tanimoq) bu holat fe'li (stative verb). U hech qachon continuous (-ing) shaklida ishlatilmaydi! 'I have known Sarah' bo'lishi kerak."
     },
     {
-      id: 2,
-      bad: "She has been work here since 2022.",
-      q: "Ushbu gapda qaysi so'z xato tuzilgan?",
-      opts: ["'work' &rarr; 'working'", "'has' &rarr; 'have'", "'since' &rarr; 'for'"],
-      ans: "'work' &rarr; 'working'",
-      expl: "Present Perfect Continuous qoidasi: has been + V-ing ('working')!"
+      id: 'h2',
+      sentence: "She has been writing four letters to her grandparents this morning.",
+      error: "has been writing",
+      correction: "has written",
+      expl: "Gapda 'four letters' degan aniq miqdor (son) bor! Aniq son ko'rsatilganda Continuous emas, PP Simple ishlatiladi: 'has written four letters'."
     },
     {
-      id: 3,
-      bad: "They have been sleeping since three hours.",
-      q: "Gapdagi vaqt bog'lovchisini to'g'rilang:",
-      opts: ["'since' &rarr; 'for'", "'have' &rarr; 'has'", "'sleeping' &rarr; 'sleep'"],
-      ans: "'since' &rarr; 'for'",
-      expl: "'three hours' vaqt davomiyligi bo'lgani uchun 'for three hours' bo'lishi shart!"
+      id: 'h3',
+      sentence: "They have lived in this small apartment since ten years.",
+      error: "since ten years",
+      correction: "for ten years",
+      expl: "'Ten years' (10 yil) bu vaqt oralig'i (davr). Davrlar oldidan 'since' emas, 'for' qo'yiladi: 'for ten years'."
     },
     {
-      id: 4,
-      bad: "He have been reading a book all day.",
-      q: "Gapdagi yordamchi fe'lni to'g'rilang:",
-      opts: ["'have' &rarr; 'has'", "'been' &rarr; 'being'", "'reading' &rarr; 'read'"],
-      ans: "'have' &rarr; 'has'",
-      expl: "'He' (u) uchun 'has been' ishlatiladi, 'have' emas!"
+      id: 'h4',
+      sentence: "How long are you waiting for the doctor here?",
+      error: "are you waiting",
+      correction: "have you been waiting",
+      expl: "O'tmishdan boshlanib hozir ham davom etayotgan kutish jarayonini 'How long' bilan so'raganda Present Continuous emas, PPC kerak: 'How long have you been waiting?'"
     },
     {
-      id: 5,
-      bad: "It has been rain since this morning.",
-      q: "Fe'lning qaysi shakli to'g'ri bo'ladi?",
-      opts: ["'rain' &rarr; 'raining'", "'has' &rarr; 'have'", "'since' &rarr; 'for'"],
-      ans: "'rain' &rarr; 'raining'",
-      expl: "has been + raining bo'lishi kerak!"
+      id: 'h5',
+      sentence: "He is playing computer games for five hours without any break.",
+      error: "is playing",
+      correction: "has been playing",
+      expl: "'For five hours' (5 soatdan beri) ko'rsatkichi bor bo'lgani sababli oddiy 'is playing' emas, 'has been playing' ishlatilishi shart."
     },
     {
-      id: 6,
-      bad: "We has been studying English for a month.",
-      q: "Gapdagi bosh xato qayerda?",
-      opts: ["'has' &rarr; 'have'", "'studying' &rarr; 'study'", "'for' &rarr; 'since'"],
-      ans: "'has' &rarr; 'have'",
-      expl: "'We' (biz) ko'plikda, shuning uchun 'we have been' bo'ladi!"
+      id: 'h6',
+      sentence: "My parents have this car since 2018.",
+      error: "have this car",
+      correction: "have had this car",
+      expl: "'Since 2018' (2018-yildan beri) egalik qilib kelish o'tmishdan hozirgacha davom etmoqda. Shuning uchun Present Simple emas, Present Perfect: 'have had this car'."
     }
   ];
 
   // 6 SCRAMBLE ITEMS
   const SCRAMBLE_ITEMS = [
     {
-      id: 1,
-      words: ["I", "have", "been", "reading", "for", "one", "hour."],
-      correct: "I have been reading for one hour."
+      id: 'sc1',
+      prompt: "Gapni to'g'ri tuzing (Men 2 soatdan beri ingliz tili o'rganyapman):",
+      words: ["I", "have", "been", "studying", "English", "for", "two", "hours."],
+      target: "I have been studying English for two hours."
     },
     {
-      id: 2,
-      words: ["She", "has", "been", "cooking", "since", "morning."],
-      correct: "She has been cooking since morning."
+      id: 'sc2',
+      prompt: "Gapni to'g'ri tuzing (U bugun 3 ta kitob o'qib chiqdi):",
+      words: ["She", "has", "read", "three", "books", "today."],
+      target: "She has read three books today."
     },
     {
-      id: 3,
-      words: ["They", "have", "been", "playing", "football", "for", "two", "hours."],
-      correct: "They have been playing football for two hours."
+      id: 'sc3',
+      prompt: "Gapni to'g'ri tuzing (Siz bu yerda qancha vaqtdan beri kutyapsiz?):",
+      words: ["How", "long", "have", "you", "been", "waiting", "here?"],
+      target: "How long have you been waiting here?"
     },
     {
-      id: 4,
-      words: ["It", "has", "been", "raining", "all", "day."],
-      correct: "It has been raining all day."
+      id: 'sc4',
+      prompt: "Gapni to'g'ri tuzing (Ertalabdan beri yomg'ir yog'moqda):",
+      words: ["It", "has", "been", "raining", "since", "this", "morning."],
+      target: "It has been raining since this morning."
     },
     {
-      id: 5,
-      words: ["We", "have", "been", "waiting", "here", "since", "noon."],
-      correct: "We have been waiting here since noon."
+      id: 'sc5',
+      prompt: "Gapni to'g'ri tuzing (Biz bir-birimizni bolalikdan beri taniymiz):",
+      words: ["We", "have", "known", "each", "other", "since", "childhood."],
+      target: "We have known each other since childhood."
     },
     {
-      id: 6,
-      words: ["He", "has", "been", "sleeping", "for", "three", "hours."],
-      correct: "He has been sleeping for three hours."
+      id: 'sc6',
+      prompt: "Gapni to'g'ri tuzing (U 5 yildan beri bu yerda ishlaydi):",
+      words: ["He", "has", "worked", "here", "for", "five", "years."],
+      target: "He has worked here for five years."
     }
   ];
 
-  // 6 SITUATIONAL MCQS
-  const MCQ_ITEMS = [
-    {
-      id: 1,
-      q: "Ko'chada ko'lmaklar bor va yer ho'l. Nima sodir bo'lgan?",
-      opts: [
-        "It has been raining.",
-        "It will rain tomorrow.",
-        "It is rain now.",
-        "It was rain yesterday."
-      ],
-      ans: "It has been raining.",
-      expl: "Hozir yer ho'l bo'lib turibdi — bu o'tmishda yomg'ir yoqqanining yaqqol natijasi: 'It has been raining'."
-    },
-    {
-      id: 2,
-      q: "Siz juda charchagansiz, chunki kun bo'yi nima qildingiz?",
-      opts: [
-        "I have been working all day.",
-        "I will work tomorrow.",
-        "I am work now.",
-        "I was work."
-      ],
-      ans: "I have been working all day.",
-      expl: "Kun bo'yi davom etgan harakat va uning hozirgi natijasi (charchoq): 'have been working all day'."
-    },
-    {
-      id: 3,
-      q: "Do'stingiz ko'zoynak taqib, 2 soatdan beri kitob o'qiyapti. Buni qanday aytamiz?",
-      opts: [
-        "He has been reading for two hours.",
-        "He is read for two hours.",
-        "He reads since two hours.",
-        "He has readed for two hours."
-      ],
-      ans: "He has been reading for two hours.",
-      expl: "He + has been + reading + for two hours!"
-    },
-    {
-      id: 4,
-      q: "'Qancha vaqtdan beri bu yerda kutyapsiz?' savoli ingliz tilida qanday bo'ladi?",
-      opts: [
-        "How long have you been waiting here?",
-        "How long are you wait here?",
-        "How long do you waiting?",
-        "How long you have wait?"
-      ],
-      ans: "How long have you been waiting here?",
-      expl: "Vaqt davomiyligini so'rash uchun 'How long have you been waiting...?' ishlatiladi."
-    },
-    {
-      id: 5,
-      q: "Onangiz soat 17:00 dan beri oshxonada shirinlik tayyorlamoqda. To'g'ri gap:",
-      opts: [
-        "Mom has been making a cake since 5 PM.",
-        "Mom have been making a cake for 5 PM.",
-        "Mom is make a cake since 5 PM.",
-        "Mom was made a cake."
-      ],
-      ans: "Mom has been making a cake since 5 PM.",
-      expl: "Mom (She) &rarr; has been making + since 5 PM."
-    },
-    {
-      id: 6,
-      q: "'Biz bolaligimizdan beri do'stmiz' gapini ingliz tilida 'know' (bilmoq) bilan tuzganda:",
-      opts: [
-        "We have known each other since childhood.",
-        "We have been knowing each other since childhood.",
-        "We are know each other for childhood.",
-        "We knowed each other."
-      ],
-      ans: "We have known each other since childhood.",
-      expl: "💡 Muhim qoida: 'know' holat fe'li bo'lgani uchun -ing olmaydi, shuning uchun 'have known' (Present Perfect Simple) ishlatiladi!"
-    }
-  ];
-
-  // 6 GUIDED TRANSLATION ITEMS
+  // 6 TRANSLATION ITEMS
   const TRANS_ITEMS = [
     {
-      id: 1,
-      uz: "1. Men ikki soatdan beri kitob o'qiyapman.",
-      hint: "I + have been + reading + for two hours",
-      placeholder: "I have been reading..."
+      id: 'tr1',
+      uz: "Men ertalabdan beri oshxonada ovqat pishiryapman.",
+      hint: "Use: have been cooking since morning",
+      model: "I have been cooking in the kitchen since morning."
     },
     {
-      id: 2,
-      uz: "2. U (qiz bola) ertalabdan beri taom pishirmoqda.",
-      hint: "She + has been + cooking + since morning",
-      placeholder: "She has been cooking..."
+      id: 'tr2',
+      uz: "U bugun 4 ta muhim xat yozdi.",
+      hint: "Use: has written (number = PP Simple)",
+      model: "She has written four important letters today."
     },
     {
-      id: 3,
-      uz: "3. Ular 30 daqiqadan beri avtobus kutishmoqda.",
-      hint: "They + have been + waiting for the bus + for 30 minutes",
-      placeholder: "They have been waiting..."
+      id: 'tr3',
+      uz: "Siz bu shaharda qancha vaqtdan beri yashaysiz?",
+      hint: "Use: How long have you lived / been living...",
+      model: "How long have you lived in this city?"
     },
     {
-      id: 4,
-      uz: "4. Yomg'ir kechadan beri yog'moqda.",
-      hint: "It + has been + raining + since yesterday",
-      placeholder: "It has been raining..."
+      id: 'tr4',
+      uz: "Biz uni 2019-yildan beri taniymiz.",
+      hint: "Use: have known since 2019 (know is stative!)",
+      model: "We have known him since 2019."
     },
     {
-      id: 5,
-      uz: "5. Biz 2021-yildan beri ingliz tili o'rganmoqdamiz.",
-      hint: "We + have been + learning English + since 2021",
-      placeholder: "We have been learning..."
+      id: 'tr5',
+      uz: "Ular 3 soatdan beri futbol o'ynashmoqda.",
+      hint: "Use: have been playing for 3 hours",
+      model: "They have been playing football for three hours."
     },
     {
-      id: 6,
-      uz: "6. Mening do'stim kun bo'yi kompyuterda ishlamoqda.",
-      hint: "My friend + has been + working on the computer + all day",
-      placeholder: "My friend has been working..."
+      id: 'tr6',
+      uz: "Nega kiyimlaringiz kirlanib ketdi? — Men mashinani ta'mirlayotgan edim.",
+      hint: "Use: I have been repairing my car",
+      model: "Why are your clothes dirty? — I have been repairing my car."
     }
   ];
 
-  // STATE TRACKER
+  // STATE
   let userResponses = {
-    irreg: {},
-    haveHas: {},
-    ing: {},
-    forSince: {},
+    verbsQuiz: {},
+    grammarQuiz: {},
     hunter: {},
-    scramble: {},
-    mcq: {}
+    scramble: {}
   };
-  let scrambleCurrent = {};
+  let scrambleState = {};
 
-  // AUDIO PRONUNCIATION HELPER
-  function speakWord(word) {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(word);
-      u.lang = 'en-US';
-      u.rate = 0.85;
-      window.speechSynthesis.speak(u);
-    } else {
-      alert("Brauzeringiz ovoz berishni qo'llab-quvvatlamaydi.");
-    }
-  }
-
-  // INITIALIZATION
+  // INIT
   function init() {
-    renderVerbTable();
-    renderIrregularQuiz();
-    renderHaveHas();
-    renderING();
-    renderForSince();
+    renderVerbsTable(VERBS);
+    renderVerbsQuiz();
+    renderGrammarQuiz();
     renderHunter();
     renderScramble();
-    renderMCQ();
-    renderTranslations();
+    renderTranslation();
     loadDraft();
     updateLiveScore();
   }
 
-  // 1. RENDER VERB TABLE
-  function renderVerbTable() {
-    const tbody = document.getElementById('verbTableBody');
-    tbody.innerHTML = IRREGULAR_VERBS_30.map((v, i) => `
+  // SPEECH SYNTHESIS
+  function speak(text) {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = 'en-US';
+      u.rate = 0.9;
+      window.speechSynthesis.speak(u);
+    }
+  }
+
+  // RENDER VERBS TABLE
+  function renderVerbsTable(list) {
+    const tbody = document.getElementById('verbsTbody');
+    tbody.innerHTML = list.map((v, idx) => `
       <tr>
-        <td style="color:#64748b; font-weight:700;">${i + 1}</td>
-        <td class="verb-v1">${v.v1}</td>
-        <td class="verb-v2">${v.v2}</td>
-        <td class="verb-v3">${v.v3}</td>
-        <td class="verb-uz">${v.uz}</td>
-        <td>
-          <button class="vocab-audio-btn" onclick="speakWord('${v.v1}, ${v.v2.split(' ')[0]}, ${v.v3.split(' ')[0]}')">🔊 Tinglash</button>
-        </td>
+        <td style="color:#64748b; font-weight:700;">${31 + idx}</td>
+        <td><span class="verb-v1">${v.v1}</span></td>
+        <td><span class="verb-v2">${v.v2}</span></td>
+        <td><span class="verb-v3">${v.v3}</span></td>
+        <td><span class="verb-uz">${v.uz}</span></td>
+        <td><button class="audio-btn" onclick="speak('${v.v1}, ${v.v2.replace('/',' or ')}, ${v.v3}')">🔊</button></td>
       </tr>
     `).join('');
   }
 
-  // 2. RENDER IRREGULAR QUIZ
-  function renderIrregularQuiz() {
-    const c = document.getElementById('irregularQuizContainer');
-    c.innerHTML = IRREGULAR_QUIZ_ITEMS.map((item, idx) => `
-      <div class="q-card" id="card_irreg_${item.id}">
-        <div class="q-num">Savol #${idx + 1} / 15</div>
+  function filterVerbs() {
+    const q = document.getElementById('verbSearchInput').value.toLowerCase().trim();
+    const filtered = VERBS.filter(v => 
+      v.v1.toLowerCase().includes(q) || 
+      v.v2.toLowerCase().includes(q) || 
+      v.v3.toLowerCase().includes(q) || 
+      v.uz.toLowerCase().includes(q)
+    );
+    renderVerbsTable(filtered);
+  }
+
+  // RENDER VERBS QUIZ
+  function renderVerbsQuiz() {
+    const c = document.getElementById('verbsQuizContainer');
+    c.innerHTML = VERB_QUIZ_ITEMS.map((item, idx) => `
+      <div class="q-card" id="card_vq_${item.id}">
+        <div class="q-num">Fe'l Savoli ${idx + 1} / ${VERB_QUIZ_ITEMS.length}</div>
         <div class="q-prompt">${item.q}</div>
         <div class="btn-group">
           ${item.opts.map(opt => `
-            <button class="choice-btn" onclick="handleChoice('irreg', ${item.id}, '${opt}')">${opt}</button>
+            <button class="choice-btn" data-opt="${opt}" onclick="handleInstantChoice('verbsQuiz', '${item.id}', '${opt}', this)">${opt}</button>
           `).join('')}
         </div>
-        <div class="expl-box" id="expl_irreg_${item.id}"></div>
+        <div class="expl-box" id="expl_vq_${item.id}"></div>
       </div>
     `).join('');
   }
 
-  // 3. RENDER HAVE HAS
-  function renderHaveHas() {
-    const c = document.getElementById('haveHasContainer');
-    c.innerHTML = HAVE_HAS_ITEMS.map((item, idx) => `
-      <div class="q-card" id="card_hh_${item.id}">
-        <div class="q-num">Mashq #${idx + 1} / 10</div>
-        <div class="q-prompt">${item.prompt.replace('______', '<code>[ ? ]</code>')}</div>
-        <div class="btn-group">
-          <button class="choice-btn" onclick="handleChoice('haveHas', ${item.id}, 'have been')">have been</button>
-          <button class="choice-btn" onclick="handleChoice('haveHas', ${item.id}, 'has been')">has been</button>
-        </div>
-        <div class="expl-box" id="expl_hh_${item.id}"></div>
-      </div>
-    `).join('');
-  }
-
-  // 4. RENDER -ING
-  function renderING() {
-    const c = document.getElementById('ingContainer');
-    c.innerHTML = ING_ITEMS.map((item, idx) => `
-      <div class="q-card" id="card_ing_${item.id}">
-        <div class="q-num">-ING Shakli #${idx + 1} / 10</div>
-        <div class="q-prompt">${item.prompt}</div>
+  // RENDER GRAMMAR QUIZ
+  function renderGrammarQuiz() {
+    const c = document.getElementById('grammarQuizContainer');
+    c.innerHTML = GRAMMAR_QUIZ_ITEMS.map((item, idx) => `
+      <div class="q-card" id="card_gq_${item.id}">
+        <div class="q-num">Grammatika Savoli ${idx + 1} / ${GRAMMAR_QUIZ_ITEMS.length}</div>
+        <div class="q-prompt">${item.q}</div>
         <div class="btn-group">
           ${item.opts.map(opt => `
-            <button class="choice-btn" onclick="handleChoice('ing', ${item.id}, '${opt}')">${opt}</button>
+            <button class="choice-btn" data-opt="${opt}" onclick="handleInstantChoice('grammarQuiz', '${item.id}', '${opt}', this)">${opt}</button>
           `).join('')}
         </div>
-        <div class="expl-box" id="expl_ing_${item.id}"></div>
+        <div class="expl-box" id="expl_gq_${item.id}"></div>
       </div>
     `).join('');
   }
 
-  // 5. RENDER FOR SINCE
-  function renderForSince() {
-    const c = document.getElementById('forSinceContainer');
-    c.innerHTML = FOR_SINCE_ITEMS.map((item, idx) => `
-      <div class="q-card" id="card_fs_${item.id}">
-        <div class="q-num">Vaqt Belgisi #${idx + 1} / 12</div>
-        <div class="q-prompt">${item.prompt.replace('______', '<code>[ ? ]</code>')}</div>
-        <div class="btn-group">
-          <button class="choice-btn" onclick="handleChoice('forSince', ${item.id}, 'for')">FOR</button>
-          <button class="choice-btn" onclick="handleChoice('forSince', ${item.id}, 'since')">SINCE</button>
-        </div>
-        <div class="expl-box" id="expl_fs_${item.id}"></div>
-      </div>
-    `).join('');
+  // INSTANT CHOICE HANDLER WITH VISUAL FEEDBACK
+  function handleInstantChoice(cat, qId, selectedOption, btnEl) {
+    if (userResponses[cat][qId]) return;
+
+    const items = (cat === 'verbsQuiz') ? VERB_QUIZ_ITEMS : GRAMMAR_QUIZ_ITEMS;
+    const item = items.find(x => x.id === qId);
+    const isCorrect = (selectedOption === item.ans);
+    userResponses[cat][qId] = { selected: selectedOption, isCorrect: isCorrect };
+
+    const qCard = document.getElementById(`card_${cat === 'verbsQuiz' ? 'vq' : 'gq'}_${qId}`);
+    const explBox = document.getElementById(`expl_${cat === 'verbsQuiz' ? 'vq' : 'gq'}_${qId}`);
+    const buttons = btnEl.parentElement.querySelectorAll('.choice-btn');
+
+    buttons.forEach(b => {
+      b.disabled = true;
+      if (b.dataset.opt === item.ans) {
+        b.classList.add('reveal-correct');
+        b.innerHTML = '✅ ' + b.dataset.opt;
+      }
+    });
+
+    if (isCorrect) {
+      qCard.classList.add('correct');
+      btnEl.classList.add('selected-correct');
+      btnEl.innerHTML = '✅ ' + selectedOption;
+      explBox.className = 'expl-box show correct';
+      explBox.innerHTML = `<strong>✅ To'g'ri javob!</strong><br>${item.expl}`;
+    } else {
+      qCard.classList.add('wrong');
+      btnEl.classList.add('selected-wrong');
+      btnEl.innerHTML = '❌ ' + selectedOption;
+      explBox.className = 'expl-box show wrong';
+      explBox.innerHTML = `<strong>❌ Noto'g'ri.</strong> To'g'ri javob: <strong style="color:#6ee7b7;">${item.ans}</strong><br>${item.expl}`;
+    }
+
+    updateLiveScore();
+    saveDraft();
   }
 
-  // 6. RENDER HUNTER
+  // RENDER MISTAKE HUNTER
   function renderHunter() {
     const c = document.getElementById('hunterContainer');
     c.innerHTML = HUNTER_ITEMS.map((item, idx) => `
       <div class="q-card" id="card_hunt_${item.id}">
-        <div class="q-num">Xato Ovchisi #${idx + 1} / 6</div>
-        <div class="sentence-box-hunter">❌ "${item.bad}"</div>
-        <div class="q-prompt">${item.q}</div>
-        <div class="btn-group" style="flex-direction:column; align-items:stretch;">
-          ${item.opts.map(opt => `
-            <button class="choice-btn" onclick="handleChoice('hunter', ${item.id}, '${opt.replace(/'/g, "\\'")}')" style="text-align:left;">
-              👉 ${opt}
-            </button>
+        <div class="q-num">Xato Ovchisi ${idx + 1} / ${HUNTER_ITEMS.length}</div>
+        <div class="hunter-sentence">"${item.sentence}"</div>
+        <div style="font-size:0.85rem; color:#94a3b8; margin-bottom:8px;">Qaysi qismda xatolik bor? Xato so'z yoki iborani bosing:</div>
+        <div class="hunter-chips">
+          ${generateHunterOptions(item).map(chunk => `
+            <button class="choice-btn" data-chunk="${chunk}" onclick="handleHunterChoice('${item.id}', '${chunk}', this)">${chunk}</button>
           `).join('')}
         </div>
         <div class="expl-box" id="expl_hunt_${item.id}"></div>
@@ -879,249 +829,207 @@
     `).join('');
   }
 
-  // 7. RENDER SCRAMBLE
+  function generateHunterOptions(item) {
+    const error = item.error;
+    const words = item.sentence.replace(/[.,]/g, '').split(' ');
+    const chunks = [error];
+    for (let i = 0; i < words.length - 1; i += 2) {
+      const candidate = words[i] + ' ' + (words[i+1] || '');
+      if (candidate.toLowerCase() !== error.toLowerCase() && chunks.length < 4) {
+        chunks.push(candidate);
+      }
+    }
+    return chunks.sort(() => Math.random() - 0.5);
+  }
+
+  function handleHunterChoice(itemId, selectedChunk, btnEl) {
+    if (userResponses.hunter[itemId]) return;
+
+    const item = HUNTER_ITEMS.find(x => x.id === itemId);
+    const isCorrect = (selectedChunk === item.error);
+    userResponses.hunter[itemId] = { selected: selectedChunk, isCorrect: isCorrect };
+
+    const qCard = document.getElementById(`card_hunt_${itemId}`);
+    const explBox = document.getElementById(`expl_hunt_${itemId}`);
+    const buttons = btnEl.parentElement.querySelectorAll('.choice-btn');
+
+    buttons.forEach(b => {
+      b.disabled = true;
+      if (b.dataset.chunk === item.error) {
+        b.classList.add('reveal-correct');
+        b.innerHTML = '🎯 ' + b.dataset.chunk;
+      }
+    });
+
+    if (isCorrect) {
+      qCard.classList.add('correct');
+      btnEl.classList.add('selected-correct');
+      explBox.className = 'expl-box show correct';
+      explBox.innerHTML = `<strong>🎯 Xato topildi: "${item.error}"</strong><br>To'g'ri shakl: <strong style="color:#6ee7b7;">${item.correction}</strong><br>${item.expl}`;
+    } else {
+      qCard.classList.add('wrong');
+      btnEl.classList.add('selected-wrong');
+      explBox.className = 'expl-box show wrong';
+      explBox.innerHTML = `<strong>❌ Bu yerda xato yo'q.</strong> Asl xato: <strong style="color:#f87171;">"${item.error}"</strong> edi.<br>To'g'ri shakl: <strong style="color:#6ee7b7;">${item.correction}</strong><br>${item.expl}`;
+    }
+
+    updateLiveScore();
+    saveDraft();
+  }
+
+  // RENDER SCRAMBLE
   function renderScramble() {
     const c = document.getElementById('scrambleContainer');
     c.innerHTML = SCRAMBLE_ITEMS.map((item, idx) => {
-      scrambleCurrent[item.id] = [];
-      const shuffled = [...item.words].sort(() => Math.random() - 0.5);
+      scrambleState[item.id] = { selected: [], words: [...item.words].sort(() => Math.random() - 0.5) };
       return `
-        <div class="q-card" id="card_scram_${item.id}">
-          <div class="q-num">Gap #${idx + 1} / 6</div>
-          <div class="scramble-result-box" id="res_scram_${item.id}">
-            <span style="color:#64748b; font-size:0.85rem;">So'zlarni bosib gapni yig'ing...</span>
+        <div class="q-card" id="card_sc_${item.id}">
+          <div class="q-num">Gap Tuzuvchi ${idx + 1} / ${SCRAMBLE_ITEMS.length}</div>
+          <div class="q-prompt">${item.prompt}</div>
+          <div class="scramble-result-box" id="result_sc_${item.id}">
+            <span style="color:#64748b; font-size:0.85rem;" id="placeholder_sc_${item.id}">Pastdagi so'zlarni ketma-ket bosing...</span>
           </div>
-          <div class="scramble-pool" id="pool_scram_${item.id}">
-            ${shuffled.map((w, wIdx) => `
-              <button class="scramble-chip" id="chip_${item.id}_${wIdx}" onclick="addScrambleWord(${item.id}, '${w}', 'chip_${item.id}_${wIdx}')">${w}</button>
+          <div class="scramble-pool" id="pool_sc_${item.id}">
+            ${scrambleState[item.id].words.map((w, wIdx) => `
+              <button class="scramble-chip" id="chip_${item.id}_${wIdx}" onclick="addScrambleWord('${item.id}', '${w}', ${wIdx})">${w}</button>
             `).join('')}
           </div>
-          <div style="display:flex; gap:8px; margin-top:10px;">
-            <button class="choice-btn" onclick="checkScramble(${item.id})" style="background:var(--primary); color:#fff; border:none;">✅ Tekshirish</button>
-            <button class="choice-btn" onclick="resetScramble(${item.id})" style="background:#1e293b; color:#cbd5e1;">🔄 Qayta yig'ish</button>
+          <div class="scramble-actions">
+            <button class="check-btn" onclick="checkScramble('${item.id}')">✔️ Tekshirish</button>
+            <button class="reset-btn" onclick="resetScramble('${item.id}')">🔄 Qaytadan</button>
           </div>
-          <div class="expl-box" id="expl_scram_${item.id}"></div>
+          <div class="expl-box" id="expl_sc_${item.id}"></div>
         </div>
       `;
     }).join('');
   }
 
-  function addScrambleWord(id, word, chipId) {
-    if (!scrambleCurrent[id]) scrambleCurrent[id] = [];
-    scrambleCurrent[id].push({ word, chipId });
-    document.getElementById(chipId).classList.add('used');
-    renderScrambleResult(id);
+  function addScrambleWord(itemId, word, chipIdx) {
+    if (userResponses.scramble[itemId]) return;
+    const state = scrambleState[itemId];
+    state.selected.push({ word, chipIdx });
+    document.getElementById(`chip_${itemId}_${chipIdx}`).classList.add('used');
+
+    const placeholder = document.getElementById(`placeholder_sc_${itemId}`);
+    if (placeholder) placeholder.style.display = 'none';
+
+    renderScrambleResult(itemId);
   }
 
-  function renderScrambleResult(id) {
-    const box = document.getElementById('res_scram_' + id);
-    const arr = scrambleCurrent[id] || [];
-    if (arr.length === 0) {
-      box.innerHTML = '<span style="color:#64748b; font-size:0.85rem;">So\'zlarni bosib gapni yig\'ing...</span>';
-    } else {
-      box.innerHTML = arr.map((item, idx) => `
-        <span class="scramble-item" onclick="removeScrambleWord(${id}, ${idx})">${item.word} ✕</span>
-      `).join('');
-    }
+  function renderScrambleResult(itemId) {
+    const resultBox = document.getElementById(`result_sc_${itemId}`);
+    const state = scrambleState[itemId];
+    resultBox.innerHTML = state.selected.map((s, pos) => `
+      <span class="scramble-item" onclick="removeScrambleWord('${itemId}', ${pos})">${s.word} ✕</span>
+    `).join('');
   }
 
-  function removeScrambleWord(id, idx) {
-    const removed = scrambleCurrent[id].splice(idx, 1)[0];
-    if (removed && removed.chipId) {
-      const chip = document.getElementById(removed.chipId);
-      if (chip) chip.classList.remove('used');
-    }
-    renderScrambleResult(id);
+  function removeScrambleWord(itemId, pos) {
+    if (userResponses.scramble[itemId]) return;
+    const state = scrambleState[itemId];
+    const removed = state.selected.splice(pos, 1)[0];
+    document.getElementById(`chip_${itemId}_${removed.chipIdx}`).classList.remove('used');
+    renderScrambleResult(itemId);
   }
 
-  function resetScramble(id) {
-    if (scrambleCurrent[id]) {
-      scrambleCurrent[id].forEach(item => {
-        const chip = document.getElementById(item.chipId);
-        if (chip) chip.classList.remove('used');
-      });
-    }
-    scrambleCurrent[id] = [];
-    renderScrambleResult(id);
-    const expl = document.getElementById('expl_scram_' + id);
-    if (expl) expl.className = 'expl-box';
-    const card = document.getElementById('card_scram_' + id);
-    if (card) { card.classList.remove('correct'); card.classList.remove('wrong'); }
+  function resetScramble(itemId) {
+    if (userResponses.scramble[itemId]) return;
+    const state = scrambleState[itemId];
+    state.selected = [];
+    document.querySelectorAll(`#pool_sc_${itemId} .scramble-chip`).forEach(ch => ch.classList.remove('used'));
+    document.getElementById(`result_sc_${itemId}`).innerHTML = `<span style="color:#64748b; font-size:0.85rem;" id="placeholder_sc_${itemId}">Pastdagi so'zlarni ketma-ket bosing...</span>`;
   }
 
-  function checkScramble(id) {
-    const item = SCRAMBLE_ITEMS.find(x => x.id === id);
-    const card = document.getElementById('card_scram_' + id);
-    const expl = document.getElementById('expl_scram_' + id);
-    const formed = (scrambleCurrent[id] || []).map(x => x.word).join(' ').trim();
+  function checkScramble(itemId) {
+    if (userResponses.scramble[itemId]) return;
+    const item = SCRAMBLE_ITEMS.find(x => x.id === itemId);
+    const state = scrambleState[itemId];
+    const userBuilt = state.selected.map(s => s.word).join(' ').trim();
 
-    if (!formed) {
-      alert("Avval so'zlarni bosing!");
+    if (!userBuilt) {
+      alert("Iltimos, avval so'zlarni tanlang!");
       return;
     }
 
-    const isCorrect = formed.toLowerCase() === item.correct.toLowerCase();
-    userResponses.scramble[id] = { formed, isCorrect, correctAns: item.correct };
+    const isCorrect = (userBuilt.toLowerCase() === item.target.toLowerCase());
+    userResponses.scramble[itemId] = { userBuilt, isCorrect };
+
+    const qCard = document.getElementById(`card_sc_${itemId}`);
+    const explBox = document.getElementById(`expl_sc_${itemId}`);
 
     if (isCorrect) {
-      card.classList.add('correct');
-      card.classList.remove('wrong');
-      expl.className = 'expl-box show correct';
-      expl.innerHTML = '✅ <b>Mukammal!</b> "' + item.correct + '"';
+      qCard.classList.add('correct');
+      explBox.className = 'expl-box show correct';
+      explBox.innerHTML = `<strong>✅ Mukammal!</strong> Gap to'g'ri tuzildi: <i>"${item.target}"</i>`;
     } else {
-      card.classList.add('wrong');
-      card.classList.remove('correct');
-      expl.className = 'expl-box show wrong';
-      expl.innerHTML = '❌ <b>Xato tartib.</b> To\'g\'ri tartib: <b>"' + item.correct + '"</b>';
+      qCard.classList.add('wrong');
+      explBox.className = 'expl-box show wrong';
+      explBox.innerHTML = `<strong>❌ Ketma-ketlikda xatolik bor.</strong><br>Siz tuzdingiz: "<i>${userBuilt}</i>"<br>To'g'ri ketma-ketlik: <strong style="color:#6ee7b7;">"${item.target}"</strong>`;
     }
 
     updateLiveScore();
     saveDraft();
   }
 
-  // 8. RENDER MCQ
-  function renderMCQ() {
-    const c = document.getElementById('mcqContainer');
-    c.innerHTML = MCQ_ITEMS.map((item, idx) => `
-      <div class="q-card" id="card_mcq_${item.id}">
-        <div class="q-num">Vaziyat Testi #${idx + 1} / 6</div>
-        <div class="q-prompt">${item.q}</div>
-        <div class="btn-group" style="flex-direction:column; align-items:stretch;">
-          ${item.opts.map((opt, optIdx) => `
-            <button class="choice-btn" id="btn_mcq_${item.id}_${optIdx}" onclick="handleMCQChoice(${item.id}, ${optIdx})" style="text-align:left;">
-              ${String.fromCharCode(65 + optIdx)}) ${opt}
-            </button>
-          `).join('')}
-        </div>
-        <div class="expl-box" id="expl_mcq_${item.id}"></div>
-      </div>
-    `).join('');
-  }
-
-  function handleMCQChoice(id, chosenIdx) {
-    const item = MCQ_ITEMS.find(x => x.id === id);
-    const card = document.getElementById('card_mcq_' + id);
-    const expl = document.getElementById('expl_mcq_' + id);
-    const chosenText = item.opts[chosenIdx];
-
-    item.opts.forEach((_, i) => {
-      const b = document.getElementById('btn_mcq_' + id + '_' + i);
-      if (b) {
-        b.disabled = true;
-        if (item.opts[i] === item.ans) b.classList.add('selected-correct');
-      }
-    });
-
-    const isCorrect = chosenText === item.ans;
-    userResponses.mcq[id] = { chosen: chosenText, isCorrect, correctAns: item.ans };
-
-    if (isCorrect) {
-      card.classList.add('correct');
-      expl.className = 'expl-box show correct';
-      expl.innerHTML = '✅ <b>To\'g\'ri!</b> ' + item.expl;
-    } else {
-      card.classList.add('wrong');
-      const badBtn = document.getElementById('btn_mcq_' + id + '_' + chosenIdx);
-      if (badBtn) badBtn.classList.add('selected-wrong');
-      expl.className = 'expl-box show wrong';
-      expl.innerHTML = '❌ <b>Xato tanlov.</b> To\'g\'ri javob: <b>' + item.ans + '</b>. ' + item.expl;
-    }
-
-    updateLiveScore();
-    saveDraft();
-  }
-
-  // 9. RENDER TRANSLATIONS
-  function renderTranslations() {
+  // RENDER TRANSLATION
+  function renderTranslation() {
     const c = document.getElementById('transContainer');
-    c.innerHTML = TRANS_ITEMS.map(t => `
+    c.innerHTML = TRANS_ITEMS.map((t, idx) => `
       <div class="trans-item">
-        <div class="trans-prompt">${t.uz}</div>
-        <div class="trans-hint">💡 ${t.hint}</div>
-        <input type="text" id="trans_${t.id}" placeholder="${t.placeholder}" oninput="saveDraft()">
+        <div class="trans-prompt">${idx + 1}. ${t.uz}</div>
+        <div class="trans-hint">💡 Yordamchi ibora: ${t.hint}</div>
+        <div style="display:flex; gap:8px;">
+          <input type="text" id="trans_${t.id}" placeholder="Inglizcha tarjimasini yozing..." oninput="saveDraft()">
+          <button class="check-btn" onclick="revealTranslation('${t.id}')">Tekshirish</button>
+        </div>
+        <div class="trans-reveal-box" id="reveal_${t.id}">
+          <strong>Namunaviy to'g'ri tarjima:</strong><br>
+          <span style="font-family:'JetBrains Mono',monospace; color:#fff;">${t.model}</span>
+          <button class="audio-btn" style="margin-left:8px;" onclick="speak('${t.model}')">🔊 Tinglash</button>
+        </div>
       </div>
     `).join('');
   }
 
-  // GENERAL CHOICE HANDLER FOR SECTIONS 2, 3, 4, 5, 6
-  function handleChoice(category, id, chosen) {
-    let dataset, prefix;
-    if (category === 'irreg') { dataset = IRREGULAR_QUIZ_ITEMS; prefix = 'irreg'; }
-    else if (category === 'haveHas') { dataset = HAVE_HAS_ITEMS; prefix = 'hh'; }
-    else if (category === 'ing') { dataset = ING_ITEMS; prefix = 'ing'; }
-    else if (category === 'forSince') { dataset = FOR_SINCE_ITEMS; prefix = 'fs'; }
-    else if (category === 'hunter') { dataset = HUNTER_ITEMS; prefix = 'hunt'; }
-
-    const item = dataset.find(x => x.id === id);
-    const card = document.getElementById(`card_${prefix}_${id}`);
-    const expl = document.getElementById(`expl_${prefix}_${id}`);
-
-    const buttons = card.querySelectorAll('.choice-btn');
-    buttons.forEach(b => {
-      b.disabled = true;
-      const bText = b.innerText.replace('👉 ', '').trim();
-      if (bText.toLowerCase() === item.ans.toLowerCase()) {
-        b.classList.add('selected-correct');
-      }
-    });
-
-    const isCorrect = chosen.toLowerCase() === item.ans.toLowerCase();
-    userResponses[category][id] = { chosen, isCorrect, correctAns: item.ans };
-
-    if (isCorrect) {
-      card.classList.add('correct');
-      expl.className = 'expl-box show correct';
-      expl.innerHTML = '✅ <b>To\'g\'ri!</b> ' + item.expl;
-    } else {
-      card.classList.add('wrong');
-      buttons.forEach(b => {
-        const bText = b.innerText.replace('👉 ', '').trim();
-        if (bText.toLowerCase() === chosen.toLowerCase()) {
-          b.classList.add('selected-wrong');
-        }
-      });
-      expl.className = 'expl-box show wrong';
-      expl.innerHTML = '❌ <b>Xato.</b> To\'g\'ri javob: <b>' + item.ans + '</b>. ' + item.expl;
-    }
-
-    updateLiveScore();
-    saveDraft();
+  function revealTranslation(tId) {
+    const box = document.getElementById('reveal_' + tId);
+    box.style.display = 'block';
   }
 
-  // SCORE CALCULATOR
+  // UPDATE LIVE SCORE & PROGRESS BAR
   function updateLiveScore() {
-    let score = 0;
+    const total = VERB_QUIZ_ITEMS.length + GRAMMAR_QUIZ_ITEMS.length + HUNTER_ITEMS.length + SCRAMBLE_ITEMS.length;
     let answered = 0;
-    // 15 irreg + 10 haveHas + 10 ing + 12 forSince + 6 hunter + 6 scramble + 6 mcq = 65 auto-graded items
-    const total = IRREGULAR_QUIZ_ITEMS.length + HAVE_HAS_ITEMS.length + ING_ITEMS.length + FOR_SINCE_ITEMS.length + HUNTER_ITEMS.length + SCRAMBLE_ITEMS.length + MCQ_ITEMS.length;
+    let correct = 0;
 
-    ['irreg', 'haveHas', 'ing', 'forSince', 'hunter', 'scramble', 'mcq'].forEach(cat => {
+    ['verbsQuiz', 'grammarQuiz', 'hunter', 'scramble'].forEach(cat => {
       Object.values(userResponses[cat] || {}).forEach(r => {
         answered++;
-        if (r.isCorrect) score++;
+        if (r.isCorrect) correct++;
       });
     });
 
-    document.getElementById('liveScoreBadge').innerText = score + ' / ' + total;
-    document.getElementById('progressInfoText').innerText = 'Javob berildi: ' + answered + ' / ' + total + ' (' + Math.round((answered/total)*100) + '%)';
-    document.getElementById('progressBarFill').style.width = Math.round((answered/total)*100) + '%';
+    const pct = Math.round((answered / total) * 100);
+    document.getElementById('liveScoreBadge').innerText = correct + ' / ' + total;
+    document.getElementById('progressInfoText').innerText = `Javob berildi: ${answered} / ${total} (${pct}%)`;
+    document.getElementById('progressBarFill').style.width = pct + '%';
 
-    if (answered === total && score >= total * 0.8) {
-      confetti({ particleCount: 70, spread: 60, origin: { y: 0.8 } });
+    if (answered === total && correct >= total * 0.8) {
+      confetti({ particleCount: 80, spread: 70, origin: { y: 0.8 } });
     }
   }
 
-  // LOCAL STORAGE PERSISTENCE
+  // LOCAL STORAGE DRAFT
   function saveDraft() {
     const data = {
-      studentName: document.getElementById('studentName').value,
-      studentTelegram: document.getElementById('studentTelegram').value,
+      name: document.getElementById('studentName').value,
+      telegram: document.getElementById('studentTelegram').value,
       userResponses,
       trans: {},
-      profile: {
-        p1: document.getElementById('profile1').value,
-        p2: document.getElementById('profile2').value,
-        p3: document.getElementById('profile3').value
+      prod: {
+        p1: document.getElementById('prod1').value,
+        p2: document.getElementById('prod2').value,
+        p3: document.getElementById('prod3').value
       }
     };
     TRANS_ITEMS.forEach(t => {
@@ -1136,23 +1044,23 @@
     if (!raw) return;
     try {
       const data = JSON.parse(raw);
-      if (data.studentName) document.getElementById('studentName').value = data.studentName;
-      if (data.studentTelegram) document.getElementById('studentTelegram').value = data.studentTelegram;
+      if (data.name) document.getElementById('studentName').value = data.name;
+      if (data.telegram) document.getElementById('studentTelegram').value = data.telegram;
       if (data.trans) {
         Object.keys(data.trans).forEach(k => {
           const el = document.getElementById('trans_' + k);
           if (el) el.value = data.trans[k];
         });
       }
-      if (data.profile) {
-        if (data.profile.p1) document.getElementById('profile1').value = data.profile.p1;
-        if (data.profile.p2) document.getElementById('profile2').value = data.profile.p2;
-        if (data.profile.p3) document.getElementById('profile3').value = data.profile.p3;
+      if (data.prod) {
+        if (data.prod.p1) document.getElementById('prod1').value = data.prod.p1;
+        if (data.prod.p2) document.getElementById('prod2').value = data.prod.p2;
+        if (data.prod.p3) document.getElementById('prod3').value = data.prod.p3;
       }
     } catch(e) {}
   }
 
-  // TELEGRAM SUBMISSION
+  // SUBMIT TO TELEGRAM
   async function submitToTelegram() {
     const name = document.getElementById('studentName').value.trim();
     const username = document.getElementById('studentTelegram').value.trim();
@@ -1167,58 +1075,47 @@
 
     btn.disabled = true;
     btn.innerText = "⏳ Yuborilmoqda...";
-    status.style.color = "#c7d2fe";
+    status.style.color = "#a7f3d0";
     status.innerText = "Telegram botga hisobot uzatilmoqda...";
 
-    let score = 0;
-    const total = IRREGULAR_QUIZ_ITEMS.length + HAVE_HAS_ITEMS.length + ING_ITEMS.length + FOR_SINCE_ITEMS.length + HUNTER_ITEMS.length + SCRAMBLE_ITEMS.length + MCQ_ITEMS.length;
-
-    ['irreg', 'haveHas', 'ing', 'forSince', 'hunter', 'scramble', 'mcq'].forEach(cat => {
-      Object.values(userResponses[cat] || {}).forEach(r => { if (r.isCorrect) score++; });
+    const total = VERB_QUIZ_ITEMS.length + GRAMMAR_QUIZ_ITEMS.length + HUNTER_ITEMS.length + SCRAMBLE_ITEMS.length;
+    let correct = 0;
+    ['verbsQuiz', 'grammarQuiz', 'hunter', 'scramble'].forEach(cat => {
+      Object.values(userResponses[cat] || {}).forEach(r => { if (r.isCorrect) correct++; });
     });
 
-    const pct = Math.round((score / total) * 100);
+    const pct = Math.round((correct / total) * 100);
 
-    let msg = "🌟 *A1 VAZIFA HISOBOTI: PRESENT PERFECT CONTINUOUS & 30 VERBS*\n";
+    let msg = "🌟 *A1 VAZIFA HISOBOTI: PRESENT PERFECT SIMPLE vs CONTINUOUS & 30 VERBS (31-60)*\n";
     msg += "━━━━━━━━━━━━━━━━━━━━\n";
     msg += "👤 *O'quvchi:* " + name + " (" + (username || "username yo'q") + ")\n";
-    msg += "🎯 *Umumiy Ball:* " + score + " / " + total + " (" + pct + "%)\n";
+    msg += "🎯 *Umumiy Ball:* " + correct + " / " + total + " (" + pct + "%)\n";
     msg += "⏰ *Vaqt:* " + new Date().toLocaleString('uz-UZ') + "\n\n";
 
-    msg += "📊 *BO'LIMLAR BO'YICHA:*\n";
-    msg += "• 1. 30 Irregular Verbs Quiz: " + Object.values(userResponses.irreg || {}).filter(r=>r.isCorrect).length + " / " + IRREGULAR_QUIZ_ITEMS.length + "\n";
-    msg += "• 2. Have been vs Has been: " + Object.values(userResponses.haveHas || {}).filter(r=>r.isCorrect).length + " / " + HAVE_HAS_ITEMS.length + "\n";
-    msg += "• 3. -ING Fe'l Shakllari: " + Object.values(userResponses.ing || {}).filter(r=>r.isCorrect).length + " / " + ING_ITEMS.length + "\n";
-    msg += "• 4. For vs Since: " + Object.values(userResponses.forSince || {}).filter(r=>r.isCorrect).length + " / " + FOR_SINCE_ITEMS.length + "\n";
-    msg += "• 5. Xato Ovchisi (Hunter): " + Object.values(userResponses.hunter || {}).filter(r=>r.isCorrect).length + " / " + HUNTER_ITEMS.length + "\n";
-    msg += "• 6. Gap Tuzuvchi (Scramble): " + Object.values(userResponses.scramble || {}).filter(r=>r.isCorrect).length + " / " + SCRAMBLE_ITEMS.length + "\n";
-    msg += "• 7. Situatsion MCQ: " + Object.values(userResponses.mcq || {}).filter(r=>r.isCorrect).length + " / " + MCQ_ITEMS.length + "\n\n";
+    msg += "📊 *BO'LIMLAR BO'YICHA NATIJALAR:*\n";
+    msg += "• 1. 30 Irregular Verbs (31-60): " + Object.values(userResponses.verbsQuiz || {}).filter(r=>r.isCorrect).length + " / " + VERB_QUIZ_ITEMS.length + "\n";
+    msg += "• 2. PP Simple vs Continuous & For/Since: " + Object.values(userResponses.grammarQuiz || {}).filter(r=>r.isCorrect).length + " / " + GRAMMAR_QUIZ_ITEMS.length + "\n";
+    msg += "• 3. Xato Ovchisi (Hunter): " + Object.values(userResponses.hunter || {}).filter(r=>r.isCorrect).length + " / " + HUNTER_ITEMS.length + "\n";
+    msg += "• 4. Gap Tuzuvchi (Scramble): " + Object.values(userResponses.scramble || {}).filter(r=>r.isCorrect).length + " / " + SCRAMBLE_ITEMS.length + "\n\n";
 
-    msg += "✍️ *TARJIMALAR (O'quvchi yozgan):*\n";
-    TRANS_ITEMS.forEach(t => {
+    msg += "✍️ *TARJIMA JAVOBLARI:*\n";
+    TRANS_ITEMS.forEach((t, i) => {
       const val = document.getElementById('trans_' + t.id)?.value.trim() || "—";
-      msg += t.id + ". " + val + "\n";
+      msg += (i + 1) + ". " + val + "\n";
     });
     msg += "\n";
 
-    msg += "🌟 *SHAXSIY PROFIL:*\n";
-    const p1 = document.getElementById('profile1').value.trim() || "—";
-    const p2 = document.getElementById('profile2').value.trim() || "—";
-    const p3 = document.getElementById('profile3').value.trim() || "—";
-    msg += "• Ingliz tili: " + p1 + "\n";
-    msg += "• Bugungi mashg'ulot: " + p2 + "\n";
-    msg += "• Shaharda yashash: " + p3 + "\n";
+    msg += "🌟 *SHAXSIY INSHO:*\n";
+    msg += "1. Ingliz tili davomiyligi (PPC):\n" + (document.getElementById('prod1').value.trim() || "—") + "\n";
+    msg += "2. Bugungi natijalar (PP Simple):\n" + (document.getElementById('prod2').value.trim() || "—") + "\n";
+    msg += "3. Do'stlik davomiyligi (Stative):\n" + (document.getElementById('prod3').value.trim() || "—") + "\n";
 
     try {
       for (const chatId of TEACHER_IDS) {
         await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            chat_id: chatId,
-            text: msg,
-            parse_mode: 'Markdown'
-          })
+          body: JSON.stringify({ chat_id: chatId, text: msg, parse_mode: 'Markdown' })
         });
       }
 
